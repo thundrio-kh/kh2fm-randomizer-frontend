@@ -31,24 +31,26 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 			// },
 		],
 	},
-	// {
-	// 	type: EnemyLocationType.BOSS_FIGHT,
-	// 	location: LocationName.CAVERN_OF_REMEMBRANCE,
-	// 	description: "Xigbar Data Fight",
-	// 	world: "12",
-	// 	room: "0A",
-	// 	event: "64",
-	// 	enemies: [
-	// 		{
-	// 			enemy: Enemies.XIGBAR_DATA,
-	// 			value: "11C4ACBC",
-	// 		},
-	// 	],
-	// },
+	{
+		type: EnemyLocationType.BOSS_FIGHT,
+		location: LocationName.CAVERN_OF_REMEMBRANCE,
+		description: "Xigbar Data Fight",
+		size: 4280342,
+		world: "12",
+		room: "0A",
+		event: "64",
+		enemies: [
+			{
+				enemy: Enemies.XIGBAR_DATA,
+				value: "11C4ACBC",
+			},
+		],
+	},
 	{
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Xaldin Data Fight",
+		size: 2616504,
 		world: "05",
 		room: "0F",
 		event: "61",
@@ -63,6 +65,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Vexen Data Fight",
+		size: 1953498,
 		world: "04",
 		room: "20",
 		event: "92",
@@ -77,6 +80,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Lexaeus Data Fight",
+		size: 1366446,
 		world: "04",
 		room: "21",
 		event: "93",
@@ -98,6 +102,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Saix Data Fight",
+		size: 3411870,
 		world: "12",
 		room: "0F",
 		event: "66",
@@ -112,6 +117,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Axel Data Fight",
+		size: 1834704,
 		world: "02",
 		room: "14",
 		event: "D5",
@@ -154,14 +160,26 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Marluxia Data Fight",
+		size: 932358,
 		world: "04",
 		room: "26",
 		event: "96",
 		enemies: [
-			// {
-			// 	enemy: Enemies.MARLUXIA_DATA,
-			// 	value: "11C59114",
-			// },
+			{
+				enemy: Enemies.MARLUXIA_DATA,
+				value: "11C59114",
+				patches: {
+					all: [
+						{
+							name: "Don't turn off player control",
+							codes: [
+								"204fa564 00000089",
+								"204fa568 00600000"
+							]
+						}
+					] 
+				},
+			},
 		],
 	},
 	{
@@ -182,6 +200,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Roxas Data Fight",
+		size: 1833586,
 		world: "12",
 		room: "15",
 		event: "63",

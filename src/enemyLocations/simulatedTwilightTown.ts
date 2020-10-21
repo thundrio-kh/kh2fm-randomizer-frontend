@@ -52,20 +52,20 @@ export const simulatedTwilightTownEnemyLocations: EnemyLocation[] = [
 			},
 		],
 	},
-	{
-		type: EnemyLocationType.MOB_FIGHT,
-		location: LocationName.SIMULATED_TWILIGHT_TOWN,
-		description: "Dusk (3rd Day; Sandlot)",
-		world: "02",
-		room: "04",
-		event: "4F",
-		enemies: [
-			{
-				enemy: Enemies.DUSK,
-				value: "11C36FF4",
-			},
-		],
-	},
+	// {
+	// 	type: EnemyLocationType.MOB_FIGHT,
+	// 	location: LocationName.SIMULATED_TWILIGHT_TOWN,
+	// 	description: "Dusk (3rd Day; Sandlot)",
+	// 	world: "02",
+	// 	room: "04",
+	// 	event: "4F",
+	// 	enemies: [
+	// 		{
+	// 			enemy: Enemies.DUSK,
+	// 			value: "11C36FF4",
+	// 		},
+	// 	],
+	// },
 	{
 		type: EnemyLocationType.MOB_FIGHT,
 		location: LocationName.SIMULATED_TWILIGHT_TOWN,
@@ -327,6 +327,7 @@ export const simulatedTwilightTownEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.SIMULATED_TWILIGHT_TOWN,
 		description: "Axel II Boss Fight",
+		size: 1834704,
 		world: "02",
 		room: "14",
 		event: "89",
@@ -334,6 +335,17 @@ export const simulatedTwilightTownEnemyLocations: EnemyLocation[] = [
 			{
 				enemy: Enemies.AXEL_II,
 				value: "11C5AF88",
+				patches: {
+					all: [
+						{
+							name: "Roxas can use RCs",
+							codes: [
+								"01C9F62F 00000001",
+								"01C9572F 00000001"
+							]
+						}
+					] 
+				},
 			},
 		],
 	},

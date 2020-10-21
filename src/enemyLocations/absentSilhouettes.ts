@@ -7,6 +7,7 @@ export const absentSilhouettesEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Vexen AS Fight",
+		size: 1953498,
 		world: "04",
 		room: "20",
 		event: "73",
@@ -21,6 +22,7 @@ export const absentSilhouettesEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Lexaeus AS Fight",
+		size: 1366446,
 		world: "04",
 		room: "21",
 		event: "8E",
@@ -49,20 +51,33 @@ export const absentSilhouettesEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Marluxia AS Fight",
+		size: 932358,
 		world: "04",
 		room: "26",
 		event: "91",
 		enemies: [
-			// {
-			// 	value: "11C58FE0",
-			// 	enemy: Enemies.MARLUXIA_AS,
-			// },
+			{
+				value: "11C58FE0",
+				enemy: Enemies.MARLUXIA_AS,
+				patches: {
+					all: [
+						{
+							name: "Don't turn off player control",
+							codes: [
+								"204fa564 00000089",
+								"204fa568 00600000"
+							]
+						}
+					] 
+				},
+			},
 		],
 	},
 	{
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Larxene AS Fight",
+		size: 1303514,
 		world: "04",
 		room: "21",
 		event: "8F",

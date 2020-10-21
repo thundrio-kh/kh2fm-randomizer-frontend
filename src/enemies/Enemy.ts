@@ -10,4 +10,8 @@ export interface Enemy {
 	type: EnemyType;
 	name: string;
 	value: string;
+	size?: number;
+	rules?: {
+		bannedFrom?: string[];
+	};
 }

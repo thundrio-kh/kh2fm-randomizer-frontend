@@ -1,5 +1,5 @@
-import { Enemy, EnemyType } from "../enemies/Enemy";
-import { bosses, enemies, enemiesMap } from "../enemyLocations";
+import { Enemy } from "../enemies/Enemy";
+import { enemies, enemiesMap } from "../enemyLocations";
 import { earlyLionDash } from "../patches/earlyLionDash";
 import { expMultiplier } from "../patches/expMultiplier";
 import { fasterOogie } from "../patches/fasterOogie";
@@ -31,7 +31,10 @@ import {
 	Toggle,
 } from "../settings/enums";
 import { createLine } from "./createLine";
+import { patchEnemies } from "../seed/patchEnemies";
 import { shuffle } from "./shuffle";
+import { placeBosses } from "../seed/placeBosses";
+import { spawnlimiter } from "src/patches/spawnlimiter";
 
 export const createPnach = (seed: Seed, configuration: Configuration) => {
 	const patches: string[] = [`// ${configuration.name}`];
@@ -111,23 +114,42 @@ export const createPnach = (seed: Seed, configuration: Configuration) => {
 		}
 
 		if (configuration.experimental.enemies === Toggle.ON) {
+			// spawn limiter needs to be low so forced fights will spawn all the enemies
+			patches.push(spawnlimiter);
+
 			for (const location of enemies) {
+
+				// Sometimes the conditionals need to reference multiple events (example: escort minnie I)
+				var event1;
+				var event2;
+				var event3;
+				if (location.eventGroup) {
+					event1 = location.eventGroup[0]
+					event2 = location.eventGroup[1]
+					event3 = location.eventGroup[2]
+				}
+				else {
+					event1 = location.event
+					event2 = location.event
+					event3 = location.event
+				}
+
 				const one = `patch=1,EE,E0${(location.enemies.length + 3)
 					.toString(16)
 					.padStart(2, "0")
-					.toUpperCase()}${location.room}${location.world},extended,0032BAE0\n`;
+					.toUpperCase()}${location.room}${location.world},extended,0032BAE0 // ${location.description}\n`;
 				const two = `patch=1,EE,E0${(location.enemies.length + 2)
 					.toString(16)
 					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE4\n`;
+					.toUpperCase()}00${event1},extended,0032BAE4\n`;
 				const three = `patch=1,EE,E0${(location.enemies.length + 1)
 					.toString(16)
 					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE6\n`;
+					.toUpperCase()}00${event2},extended,0032BAE6\n`;
 				const four = `patch=1,EE,E0${location.enemies.length
 					.toString(16)
 					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE8\n`;
+					.toUpperCase()}00${event3},extended,0032BAE8\n`;
 
 				const content = location.enemies.reduce(
 					(prev, curr) =>
@@ -146,57 +168,44 @@ export const createPnach = (seed: Seed, configuration: Configuration) => {
 		}
 
 		if (configuration.experimental.bosses === Toggle.ON) {
-			const shuffledBosses = [
-				...shuffle(
-					bosses
-						.map(location => location.enemies)
-						.reduce((prev, curr) => prev.concat(curr)),
-					configuration.name
-				),
-			];
 
-			for (const location of bosses) {
-				const lines = location.enemies.length * 2;
 
-				const one = `patch=1,EE,E0${(lines + 3)
-					.toString(16)
-					.padStart(2, "0")
-					.toUpperCase()}${location.room}${location.world},extended,0032BAE0\n`;
-				const two = `patch=1,EE,E0${(lines + 2)
-					.toString(16)
-					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE4\n`;
-				const three = `patch=1,EE,E0${(lines + 1)
-					.toString(16)
-					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE6\n`;
-				const four = `patch=1,EE,E0${lines
-					.toString(16)
-					.padStart(2, "0")
-					.toUpperCase()}00${location.event},extended,0032BAE8\n`;
+			// const starttime = (new Date()).getUTCMilliseconds()
 
-				const content = location.enemies.reduce((prev, curr) => {
-					let enemy: Enemy;
+			var replacementMapping: any = placeBosses(configuration.name);
 
-					if (curr.enemy.type === EnemyType.BOSS) {
-						enemy = shuffledBosses.shift()!.enemy;
-					} else {
-						enemy = enemySeed.get(curr.enemy.value)!;
-					}
+			// console.log( ( ((new Date()).getUTCMilliseconds()) - starttime) / 1000 )
+			// console.log(replacementMapping)
 
-					const modifierAddress = (parseInt(curr.value, 16) + 32).toString(16);
-					const modifier =
-						enemy.value.length === 6 ? enemy.value.substring(0, 2) : "";
 
-					return (
-						prev +
-						createLine(curr.value, enemy.value, false) +
-						` // ${enemy.name} (was ${curr.enemy.name})\n` +
-						createLine(modifierAddress, modifier)
-					);
-				}, one + two + three + four);
+			if (replacementMapping) {
+				// apply volcano/blizzard lord replacements first, as they are one of two rooms currently randomized with 2+ bosses
+				var agrabahbosses = replacementMapping.filter((rep: any) => rep.old.world === "07" &&
+																	rep.old.room === "03" &&
+																	rep.old.event === "3B")
 
-				patches.push(content);
+				patches.push(patchEnemies(agrabahbosses, "07", "03", "3B"))
+
+				// apply leon/yuffie replacements second. 
+				var leonyuffie = replacementMapping.filter((rep: any) => rep.old.world === "06" &&
+																	rep.old.room === "BD" &&
+																	rep.old.event === "0A")
+
+				patches.push(patchEnemies(leonyuffie, "06", "BD", "0A"))
+				
+				//filter out the rooms with two replacements and replace the rest
+				replacementMapping = replacementMapping.filter((rep: any) => !(rep.old.world === "07" &&
+																			rep.old.room === "03" &&
+																			rep.old.event === "3B"))
+
+				replacementMapping = replacementMapping.filter((rep: any) => !(rep.old.world === "06" &&
+																			rep.old.room === "BD" &&
+																			rep.old.event === "0A"))
+
+				for (var index = 0; index < replacementMapping.length; index++) {
+					const replacement = replacementMapping[index]
+					patches.push(patchEnemies([replacement], replacement.old.world, replacement.old.room, replacement.old.event))
+				}
 			}
 		}
 	}

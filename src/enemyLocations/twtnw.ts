@@ -7,6 +7,7 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.TWTNW,
 		description: "Roxas Boss Fight",
+		size: 1833586,
 		world: "12",
 		room: "15",
 		event: "41",
@@ -17,13 +18,21 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 			},
 		],
 	},
-	// {
-	// 	type: EnemyLocationType.BOSS_FIGHT,
-	// 	location: LocationName.TWTNW,
-	// 	description: "Xigbar Boss Fight",
-	// 	value: "11C4AB88",
-	// 	enemy: Enemies.???,
-	// },
+	{
+		type: EnemyLocationType.BOSS_FIGHT,
+		location: LocationName.TWTNW,
+		description: "Xigbar Boss Fight",
+		size: 4280342,
+		world: "12",
+		room: "0A",
+		event: "39",
+		enemies: [
+			{
+				enemy: Enemies.XIGBAR,
+				value: "11C4AB88",
+			},
+		],
+	},
 	// {
 	// 	type: EnemyLocationType.BOSS_FIGHT,
 	// 	location: LocationName.TWTNW,
@@ -35,6 +44,7 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.TWTNW,
 		description: "Saix Boss Fight",
+		size: 3411870,
 		world: "12",
 		room: "0F",
 		event: "38",
@@ -67,26 +77,26 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 		room: "1A",
 		event: "45",
 		enemies: [
-			{
-				enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
-				value: "11C5C118",
-			},
-			{
-				enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
-				value: "11C5C158",
-			},
-			{
-				enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
-				value: "11C5C198",
-			},
-			{
-				enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
-				value: "11C5C1D8",
-			},
-			{
-				enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
-				value: "11C5C218",
-			},
+			// {
+			// 	enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
+			// 	value: "11C5C118",
+			// },
+			// {
+			// 	enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
+			// 	value: "11C5C158",
+			// },
+			// {
+			// 	enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
+			// 	value: "11C5C198",
+			// },
+			// {
+			// 	enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
+			// 	value: "11C5C1D8",
+			// },
+			// {
+			// 	enemy: Enemies.NOBODY_FROM_FINAL_BATTLE_V1,
+			// 	value: "11C5C218",
+			// },
 		],
 	},
 	{
@@ -175,6 +185,7 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.TWTNW,
 		description: "Armor Xemnas I Boss Fight",
+		size: 2602772,
 		world: "12",
 		room: "18",
 		event: "47",
@@ -189,6 +200,7 @@ export const twtnwEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.TWTNW,
 		description: "Armor Xemnas II Boss Fight",
+		size: 1846780,
 		world: "12",
 		room: "17",
 		event: "49",

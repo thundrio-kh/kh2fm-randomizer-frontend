@@ -7,6 +7,7 @@ export const spaceParanoidsEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.SPACE_PARANOIDS,
 		description: "Hostile Program Boss Fight",
+		size: 2292720,
 		world: "11",
 		room: "04",
 		event: "37",
@@ -113,88 +114,89 @@ export const spaceParanoidsEnemyLocations: EnemyLocation[] = [
 		room: "07",
 		event: "39",
 		enemies: [
-			{
-				enemy: Enemies.DEVASTATOR,
-				value: "11C59864",
-			},
-			{
-				enemy: Enemies.DEVASTATOR,
-				value: "11C598A4",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C598E4",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C59990",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C599D0",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C59A10",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C59AEC",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C59B2C",
-			},
-			{
-				enemy: Enemies.STRAFER_FORCED_FIGHTS,
-				value: "11C59B6C",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59BAC",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59BEC",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59C2C",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59C6C",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59CAC",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59CEC",
-			},
-			{
-				enemy: Enemies.MAGNUM_LOADER,
-				value: "11C59D2C",
-			},
-			{
-				enemy: Enemies.DEVASTATOR,
-				value: "11C59E10",
-			},
-			{
-				enemy: Enemies.DEVASTATOR,
-				value: "11C59E50",
-			},
-			{
-				enemy: Enemies.DEVASTATOR,
-				value: "11C59E90",
-			},
+			// {
+			// 	enemy: Enemies.DEVASTATOR,
+			// 	value: "11C59864",
+			// },
+			// {
+			// 	enemy: Enemies.DEVASTATOR,
+			// 	value: "11C598A4",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C598E4",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C59990",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C599D0",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C59A10",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C59AEC",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C59B2C",
+			// },
+			// {
+			// 	enemy: Enemies.STRAFER_FORCED_FIGHTS,
+			// 	value: "11C59B6C",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59BAC",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59BEC",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59C2C",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59C6C",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59CAC",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59CEC",
+			// },
+			// {
+			// 	enemy: Enemies.MAGNUM_LOADER,
+			// 	value: "11C59D2C",
+			// },
+			// {
+			// 	enemy: Enemies.DEVASTATOR,
+			// 	value: "11C59E10",
+			// },
+			// {
+			// 	enemy: Enemies.DEVASTATOR,
+			// 	value: "11C59E50",
+			// },
+			// {
+			// 	enemy: Enemies.DEVASTATOR,
+			// 	value: "11C59E90",
+			// },
 		],
 	},
 	{
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.SPACE_PARANOIDS,
 		description: "Sark Boss Fight",
+		size: 1908520,
 		world: "11",
 		room: "09",
 		event: "3A",
