@@ -1,6 +1,6 @@
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import { Slider, Tooltip } from "antd";
-import { SliderBaseProps } from "antd/lib/slider";
+import { SliderProps } from "antd/lib/slider";
 import React from "react";
 
 export const Marks = {
@@ -8,7 +8,7 @@ export const Marks = {
 	randomizing: { 0: "Vanilla", 1: "Replace", 2: "Randomize" },
 };
 
-export interface SettingSliderProps extends SliderBaseProps {
+export interface SettingSliderProps extends SliderProps {
 	title: string;
 	help?: string;
 }

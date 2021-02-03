@@ -1,4 +1,5 @@
 import { Divider } from "antd";
+import { SliderValue } from "antd/lib/slider";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";
@@ -14,7 +15,7 @@ export const TabPaneSettings: React.FC = () => {
 		settings: [settings, setSettings],
 	} = useContext(SeedContext);
 
-	const mapValue = useValueMapper<Settings, number, "gameMode">([
+	const mapValue = useValueMapper<Settings, SliderValue, "gameMode">([
 		settings,
 		setSettings,
 	]);
