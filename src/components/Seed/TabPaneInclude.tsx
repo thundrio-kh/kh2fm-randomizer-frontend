@@ -1,3 +1,4 @@
+import { SliderValue } from "antd/lib/slider";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";
@@ -11,7 +12,7 @@ export const TabPaneInclude: React.FC = () => {
 		worlds: [worlds],
 	} = useContext(SeedContext);
 
-	const mapValue = useValueMapper<Include, number>([include, setInclude]);
+	const mapValue = useValueMapper<Include, SliderValue>([include, setInclude]);
 
 	return (
 		<div className="tab-pane">
