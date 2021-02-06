@@ -151,7 +151,7 @@ export const TabPaneSpoilerLogs: React.FC<Props> = ({ active }) => {
 							onChange={e =>
 								setSelectedKeys(e.target.value ? [e.target.value] : [])
 							}
-							onPressEnter={confirm}
+							onPressEnter={() => confirm({ closeDropdown: true })}
 							style={{ width: 188, marginBottom: 8, display: "block" }}
 							ref={node => {
 								inputRef.current = node;
@@ -160,7 +160,7 @@ export const TabPaneSpoilerLogs: React.FC<Props> = ({ active }) => {
 						<Space>
 							<Button
 								type="primary"
-								onClick={confirm}
+								onClick={() => confirm({ closeDropdown: true })}
 								size="small"
 								style={{ width: 90 }}
 							>
