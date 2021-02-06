@@ -1,5 +1,5 @@
+import { bosses, Experimental } from "@valaxor/kh2fm-randomizer";
 import { Divider, Typography } from "antd";
-import { bosses, Experimental } from "kh2fm-randomizer";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";

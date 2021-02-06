@@ -1,11 +1,11 @@
 import { DeleteOutlined } from "@ant-design/icons";
-import { Button, Divider, Input, Modal } from "antd";
 import {
 	defaultGoAModSettings,
 	defaultInclude,
 	defaultSettings,
 	defaultWorlds,
-} from "kh2fm-randomizer";
+} from "@valaxor/kh2fm-randomizer";
+import { Button, Divider, Input, Modal } from "antd";
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { SeedContext } from "../../context/seed";
 import { ConfigDiff, useConfigDiff } from "../../hooks/useConfigDiff";

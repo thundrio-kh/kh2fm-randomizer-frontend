@@ -5,7 +5,7 @@ import {
 	defaultSettings,
 	defaultWorlds,
 	GoAModSettings,
-} from "kh2fm-randomizer";
+} from "@valaxor/kh2fm-randomizer";
 import _ from "lodash";
 import { useContext, useMemo } from "react";
 import { SeedContext } from "../context/seed";

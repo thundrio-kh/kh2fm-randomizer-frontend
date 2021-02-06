@@ -1,4 +1,4 @@
-import { Include, RandomizingAction } from "kh2fm-randomizer";
+import { Include, RandomizingAction } from "@valaxor/kh2fm-randomizer";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";

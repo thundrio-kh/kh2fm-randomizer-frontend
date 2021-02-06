@@ -1,5 +1,5 @@
+import { GoAModSettings, Leveling, Toggle } from "@valaxor/kh2fm-randomizer";
 import { Divider } from "antd";
-import { GoAModSettings, Leveling, Toggle } from "kh2fm-randomizer";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";

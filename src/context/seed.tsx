@@ -11,11 +11,11 @@ import {
 	Include,
 	Seed,
 	Settings,
-	useSeed,
 	Worlds,
-} from "kh2fm-randomizer";
+} from "@valaxor/kh2fm-randomizer";
 import React, { useMemo, useState } from "react";
 import { useConfigQuery } from "../hooks/useConfigQuery";
+import { useSeed } from "../hooks/useSeed";
 import { useSeedName } from "../hooks/useSeedName";
 
 interface SeedContextType {

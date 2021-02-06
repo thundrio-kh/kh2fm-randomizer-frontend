@@ -1,11 +1,11 @@
 import { SearchOutlined } from "@ant-design/icons";
+import { LocationName } from "@valaxor/kh2fm-randomizer/dist/types/LocationName";
+import { RewardLocationType } from "@valaxor/kh2fm-randomizer/dist/types/RewardLocation";
 import { Button, Input, Space, Table } from "antd";
 import {
 	ColumnFilterItem,
 	FilterDropdownProps,
 } from "antd/lib/table/interface";
-import { LocationName } from "kh2fm-randomizer/dist/types/LocationName";
-import { RewardLocationType } from "kh2fm-randomizer/dist/types/RewardLocation";
 import React, {
 	useCallback,
 	useContext,

@@ -6,12 +6,12 @@
 	"dependencies": {
 		"@ant-design/icons": "^4.4.0",
 		"@material-ui/core": "^4.11.3",
+		"@valaxor/kh2fm-randomizer": "^1.0.0",
 		"antd": "^4.10.3",
 		"axios": "^0.21.1",
 		"copy-to-clipboard": "^3.3.1",
 		"downloadjs": "^1.4.7",
 		"firebase": "^8.2.4",
-		"kh2fm-randomizer": "file:lib/kh2fm-randomizer",
 		"lodash": "^4.17.20",
 		"query-string": "^6.13.8",
 		"react": "^17.0.1",
@@ -42,8 +42,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
-		"refresh-lib": "npm uninstall kh2fm-randomizer && npm i ./lib/kh2fm-randomizer"
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": "react-app"

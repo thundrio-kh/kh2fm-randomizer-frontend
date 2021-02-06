@@ -1,7 +1,7 @@
+import { createPnach } from "@valaxor/kh2fm-randomizer";
 import { Button, Dropdown, Menu } from "antd";
 import { MenuProps } from "antd/lib/menu";
 import downloadjs from "downloadjs";
-import { createPnach } from "kh2fm-randomizer";
 import React, { useCallback, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { SeedContext } from "../../context/seed";
