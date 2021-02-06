@@ -1,5 +1,6 @@
 import { GameMode, Leveling, Settings } from "@valaxor/kh2fm-randomizer";
 import { Divider } from "antd";
+import { SliderValue } from "antd/lib/slider";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";
 import { useValueMapper } from "../../hooks/useValueMapper";
@@ -13,7 +14,7 @@ export const TabPaneSettings: React.FC = () => {
 		settings: [settings, setSettings],
 	} = useContext(SeedContext);
 
-	const mapValue = useValueMapper<Settings, number, "gameMode">([
+	const mapValue = useValueMapper<Settings, SliderValue, "gameMode">([
 		settings,
 		setSettings,
 	]);
@@ -31,7 +32,10 @@ export const TabPaneSettings: React.FC = () => {
 					disabled
 				/>
 
-				<SettingSlider title="Critical Mode" {...mapValue("criticalMode")} />
+				<SettingSlider 
+					title="Critical Mode"
+					help="Randomizes abilities normally received at the start of Critical Mode. Disable this when you're not playing on Critical Mode."
+					{...mapValue("criticalMode")} />
 
 				<SettingSlider
 					title="Leveling"
