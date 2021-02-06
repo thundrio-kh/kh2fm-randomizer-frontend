@@ -1,13 +1,15 @@
 import { DeleteOutlined } from "@ant-design/icons";
+import {
+	defaultGoAModSettings,
+	defaultInclude,
+	defaultSettings,
+	defaultWorlds,
+} from "@valaxor/kh2fm-randomizer";
 import { Button, Divider, Input, Modal } from "antd";
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { SeedContext } from "../../context/seed";
 import { ConfigDiff, useConfigDiff } from "../../hooks/useConfigDiff";
 import { useToggle } from "../../hooks/useToggle";
-import { defaultGoAModSettings } from "../../settings/GoAModSettings";
-import { defaultInclude } from "../../settings/Include";
-import { defaultSettings } from "../../settings/Settings";
-import { defaultWorlds } from "../../settings/Worlds";
 
 const presetLocalStorage = "presets";
 

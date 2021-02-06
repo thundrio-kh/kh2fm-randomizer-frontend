@@ -1,4 +1,6 @@
 import { SearchOutlined } from "@ant-design/icons";
+import { LocationName } from "@valaxor/kh2fm-randomizer/dist/types/LocationName";
+import { RewardLocationType } from "@valaxor/kh2fm-randomizer/dist/types/RewardLocation";
 import { Button, Input, Space, Table } from "antd";
 import {
 	ColumnFilterItem,
@@ -14,8 +16,6 @@ import React, {
 } from "react";
 import { SeedContext } from "../../context/seed";
 import { analytics } from "../../firebase";
-import { LocationName } from "../../LocationName";
-import { RewardLocationType } from "../../rewardLocations/RewardLocation";
 
 interface Props {
 	active: boolean;
