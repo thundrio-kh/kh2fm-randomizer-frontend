@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
 import App from "./App";
+import { UserContextProvider } from "./context/user";
 import "./firebase";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<HashRouter basename={"/"}>
-			<App />
+			<UserContextProvider>
+				<App />
+			</UserContextProvider>
 		</HashRouter>
 	</React.StrictMode>,
 	document.getElementById("root")
