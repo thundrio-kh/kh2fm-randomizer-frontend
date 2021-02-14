@@ -1,36 +1,14 @@
-import axios from "axios";
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext } from "react";
+import { UserQuery, useUserQuery } from "../../graphql/generated";
 
-interface Provider {
-	id: string;
-	username: string;
-}
-
-interface User {
-	_id: string;
-	providers: {
-		patreon?: Provider;
-		twitch?: Provider;
-		discord?: Provider;
-	};
-}
-
-export const UserContext = createContext<User | null>(null);
+export const UserContext = createContext<UserQuery["user"] | null>(null);
 
 export const UserContextProvider: React.FC = ({ children }) => {
-	const [user, setUser] = useState<User | null>(null);
+	const { data } = useUserQuery();
 
-	useEffect(() => {
-		axios
-			.get<User>("http://localhost:5000/api/user", { withCredentials: true })
-			.then(response => {
-				setUser(response.data);
-				console.log(response.data);
-			})
-			.catch(error => {
-				console.error(error);
-			});
-	}, []);
-
-	return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+	return (
+		<UserContext.Provider value={data?.user ?? null}>
+			{children}
+		</UserContext.Provider>
+	);
 };
