@@ -1,7 +1,19 @@
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 
-interface User {}
+interface Provider {
+	id: string;
+	username: string;
+}
+
+interface User {
+	_id: string;
+	providers: {
+		patreon?: Provider;
+		twitch?: Provider;
+		discord?: Provider;
+	};
+}
 
 export const UserContext = createContext<User | null>(null);
 
