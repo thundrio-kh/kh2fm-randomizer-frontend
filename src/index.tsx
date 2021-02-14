@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { UserContextProvider } from "./context/user";
 import "./firebase";
 import { ApolloProvider } from "./graphql/provider";
 import * as serviceWorker from "./serviceWorker";
@@ -11,9 +10,7 @@ ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter basename={"/"}>
 			<ApolloProvider>
-				<UserContextProvider>
-					<App />
-				</UserContextProvider>
+				<App />
 			</ApolloProvider>
 		</BrowserRouter>
 	</React.StrictMode>,

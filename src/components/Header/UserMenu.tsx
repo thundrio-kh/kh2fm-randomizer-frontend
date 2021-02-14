@@ -6,11 +6,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Menu, Modal, Typography } from "antd";
 import React from "react";
-import { useUser } from "../../context/user/useUser";
+import { useUserQuery } from "../../graphql/generated";
 import { useToggle } from "../../hooks/useToggle";
 
 const buttonStyles: React.CSSProperties = {
-	// padding: 8,
 	color: "#fff",
 	height: 40,
 	borderRadius: 5,
@@ -20,7 +19,9 @@ const buttonStyles: React.CSSProperties = {
 };
 
 export const UserMenu: React.FC = () => {
-	const user = useUser();
+	const { data } = useUserQuery();
+	const user = data?.user;
+
 	const [open, toggleOpen] = useToggle(false);
 
 	return user ? (
