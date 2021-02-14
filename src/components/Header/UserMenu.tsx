@@ -27,10 +27,12 @@ export const UserMenu: React.FC = () => {
 	return user ? (
 		<Menu mode="horizontal" theme="dark" selectedKeys={[]}>
 			<Menu.Item>
-				Hi{" "}
-				{user.providers.patreon?.username ||
-					user.providers.twitch?.username ||
-					user.providers.discord?.username}
+				<Typography.Link href="http://localhost:5000/auth/logout">
+					Hi{" "}
+					{user.providers.patreon?.username ||
+						user.providers.twitch?.username ||
+						user.providers.discord?.username}
+				</Typography.Link>
 			</Menu.Item>
 		</Menu>
 	) : (
