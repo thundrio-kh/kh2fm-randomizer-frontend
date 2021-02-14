@@ -1,18 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { UserContextProvider } from "./context/user";
 import "./firebase";
+import { ApolloProvider } from "./graphql/provider";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<HashRouter basename={"/"}>
-			<UserContextProvider>
-				<App />
-			</UserContextProvider>
-		</HashRouter>
+		<BrowserRouter basename={"/"}>
+			<ApolloProvider>
+				<UserContextProvider>
+					<App />
+				</UserContextProvider>
+			</ApolloProvider>
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
