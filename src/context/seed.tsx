@@ -1,18 +1,14 @@
+import { defaultConfiguration } from "@valaxor/kh2fm-randomizer";
 import {
 	Configuration,
-	defaultExperimental,
-	defaultGoAModSettings,
-	defaultInclude,
-	defaultSettings,
-	defaultWorlds,
 	Experimental,
-	GameMode,
 	GoAModSettings,
 	Include,
 	Seed,
 	Settings,
 	Worlds,
-} from "@valaxor/kh2fm-randomizer";
+} from "@valaxor/kh2fm-randomizer/dist/types";
+import { GameMode } from "@valaxor/kh2fm-randomizer/dist/types/enums";
 import React, { useMemo, useState } from "react";
 import { useConfigQuery } from "../hooks/useConfigQuery";
 import { useSeed } from "../hooks/useSeed";
@@ -49,27 +45,27 @@ export const SeedContextProvider: React.FC = ({ children }) => {
 	const seedName = useSeedName();
 
 	const [settings, setSettings] = useState<Settings>({
-		...defaultSettings,
+		...defaultConfiguration.settings,
 		...(query.settings || {}),
 	});
 
 	const [worlds, setWorld] = useState<Worlds>({
-		...defaultWorlds,
+		...defaultConfiguration.worlds,
 		...(query.worlds || {}),
 	});
 
 	const [include, setInclude] = useState<Include>({
-		...defaultInclude,
+		...defaultConfiguration.include,
 		...(query.include || {}),
 	});
 
 	const [goa, setGoA] = useState<GoAModSettings>({
-		...defaultGoAModSettings,
+		...defaultConfiguration.gameMode.goa,
 		...(query.goa || {}),
 	});
 
 	const [experimental, setExperimental] = useState<Experimental>(
-		defaultExperimental
+		defaultConfiguration.experimental
 	);
 
 	const configuration = useMemo<Configuration>(

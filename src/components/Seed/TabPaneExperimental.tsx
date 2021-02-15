@@ -1,4 +1,5 @@
-import { bosses, Experimental } from "@valaxor/kh2fm-randomizer";
+import { bosses } from "@valaxor/kh2fm-randomizer/dist/enemyLocations";
+import { Experimental } from "@valaxor/kh2fm-randomizer/dist/types";
 import { Divider, Typography } from "antd";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";

@@ -1,4 +1,5 @@
-import { Configuration, createSeed, Seed } from "@valaxor/kh2fm-randomizer";
+import { createSeed } from "@valaxor/kh2fm-randomizer";
+import { Configuration, Seed } from "@valaxor/kh2fm-randomizer/dist/types";
 import { message } from "antd";
 import { useEffect, useReducer } from "react";
 

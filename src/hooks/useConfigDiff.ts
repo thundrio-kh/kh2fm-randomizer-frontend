@@ -1,11 +1,8 @@
+import { defaultConfiguration } from "@valaxor/kh2fm-randomizer";
 import {
 	Configuration,
-	defaultGoAModSettings,
-	defaultInclude,
-	defaultSettings,
-	defaultWorlds,
 	GoAModSettings,
-} from "@valaxor/kh2fm-randomizer";
+} from "@valaxor/kh2fm-randomizer/dist/types";
 import _ from "lodash";
 import { useContext, useMemo } from "react";
 import { SeedContext } from "../context/seed";
@@ -34,10 +31,16 @@ export const useConfigDiff = (): ConfigDiff => {
 
 	return useMemo(
 		() => ({
-			settings: difference(configuration.settings, defaultSettings),
-			worlds: difference(configuration.worlds, defaultWorlds),
-			include: difference(configuration.include, defaultInclude),
-			goa: difference(configuration.gameMode.goa, defaultGoAModSettings),
+			settings: difference(
+				configuration.settings,
+				defaultConfiguration.settings
+			),
+			worlds: difference(configuration.worlds, defaultConfiguration.worlds),
+			include: difference(configuration.include, defaultConfiguration.include),
+			goa: difference(
+				configuration.gameMode.goa,
+				defaultConfiguration.gameMode.goa
+			),
 		}),
 		[
 			configuration.settings,

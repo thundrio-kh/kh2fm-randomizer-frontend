@@ -1,4 +1,5 @@
-import { GameMode, Leveling, Settings } from "@valaxor/kh2fm-randomizer";
+import { Settings } from "@valaxor/kh2fm-randomizer/dist/types";
+import { GameMode, Leveling } from "@valaxor/kh2fm-randomizer/dist/types/enums";
 import { Divider } from "antd";
 import React, { useContext } from "react";
 import { SeedContext } from "../../context/seed";

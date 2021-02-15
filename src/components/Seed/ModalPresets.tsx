@@ -1,10 +1,5 @@
 import { DeleteOutlined } from "@ant-design/icons";
-import {
-	defaultGoAModSettings,
-	defaultInclude,
-	defaultSettings,
-	defaultWorlds,
-} from "@valaxor/kh2fm-randomizer";
+import { defaultConfiguration } from "@valaxor/kh2fm-randomizer";
 import { Button, Divider, Input, Modal } from "antd";
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { SeedContext } from "../../context/seed";
@@ -46,22 +41,22 @@ export const ModalPresets: React.FC = () => {
 	const setPreset = useCallback(
 		(preset: Partial<ConfigDiff>) => {
 			setSettings({
-				...defaultSettings,
+				...defaultConfiguration.settings,
 				...preset.settings,
 			});
 
 			setWorlds({
-				...defaultWorlds,
+				...defaultConfiguration.worlds,
 				...preset.worlds,
 			});
 
 			setInclude({
-				...defaultInclude,
+				...defaultConfiguration.include,
 				...preset.include,
 			});
 
 			setGoA({
-				...defaultGoAModSettings,
+				...defaultConfiguration.gameMode.goa,
 				...preset.goa,
 			});
 		},
