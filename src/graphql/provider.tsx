@@ -1,14 +1,22 @@
-import { ApolloProvider as Provider } from "@apollo/react-hooks";
-import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
+import {
+	ApolloClient,
+	ApolloProvider as Provider,
+	HttpLink,
+	InMemoryCache,
+} from "@apollo/client";
 import React from "react";
 import { UserQuery } from "./user/query";
 
-const httpLink = new HttpLink({
-	uri: process.env.REACT_APP_GRAPHQL_URI!,
-	credentials: "include",
+const client = new ApolloClient({
+	cache: new InMemoryCache(),
 });
 
-const client = new ApolloClient({ link: httpLink, cache: new InMemoryCache() });
+client.setLink(
+	new HttpLink({
+		uri: process.env.REACT_APP_GRAPHQL_URI!,
+		credentials: "include",
+	})
+);
 
 client.query({ query: UserQuery });
 
