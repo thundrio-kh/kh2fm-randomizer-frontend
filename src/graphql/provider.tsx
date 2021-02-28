@@ -8,7 +8,7 @@ import React from "react";
 import { UserQuery } from "./user/query";
 
 const client = new ApolloClient({
-	cache: new InMemoryCache(),
+	cache: new InMemoryCache({ addTypename: false }),
 });
 
 client.setLink(

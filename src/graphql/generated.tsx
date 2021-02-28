@@ -14,12 +14,83 @@ export type Scalars = {
 };
 
 
+export type Configuration = {
+  settings: Settings;
+  worlds: Worlds;
+  include: Include;
+  gameMode: GameModeSchema;
+  experimental: Experimental;
+};
+
 export type DiscordProvider = Provider & {
   id: Scalars['ID'];
   username: Scalars['String'];
   email: Scalars['String'];
   accessToken: Scalars['String'];
 };
+
+export type Experimental = {
+  enemies: Toggle;
+  bosses: Toggle;
+  superbossRetry: Toggle;
+};
+
+export enum GameMode {
+  BaseGame = 'BASE_GAME',
+  GoaMod = 'GOA_MOD'
+}
+
+export type GameModeSchema = {
+  mode: GameMode;
+  goa: GoAModSettings;
+};
+
+export type GoAModSettings = {
+  promiseCharm: Toggle;
+  goMode: Toggle;
+  shorterDay5: Toggle;
+  fasterOogie: Toggle;
+  fasterPresents: Toggle;
+  earlyLionDash: Toggle;
+  fastHyenasTwo: Toggle;
+  skipDragon: Toggle;
+  fieldCamera: Toggle;
+  cameraUpDown: Toggle;
+  cameraLeftRight: Toggle;
+  summonEffects: Toggle;
+};
+
+export type Include = {
+  keybladeAbilities: RandomizingAction;
+  donaldAbilities: Toggle;
+  goofyAbilities: Toggle;
+  absentSilhouettes: RandomizingAction;
+  dataOrganizationXIII: RandomizingAction;
+  olympusCups: RandomizingAction;
+  hadesCup: Toggle;
+  terra: Toggle;
+  sephiroth: Toggle;
+  ultimaWeapon: Toggle;
+  finalForm: Toggle;
+  formAbilities: RandomizingAction;
+  growthAbilities: RandomizingAction;
+  maxGrowthAbilities: Toggle;
+  synthItems: Toggle;
+};
+
+export enum Leveling {
+  LevelOne = 'LEVEL_ONE',
+  LevelFifty = 'LEVEL_FIFTY',
+  LevelNinetyNine = 'LEVEL_NINETY_NINE'
+}
+
+export enum Multiplier {
+  One = 'ONE',
+  Two = 'TWO',
+  Three = 'THREE',
+  Four = 'FOUR',
+  Five = 'FIVE'
+}
 
 export type PatreonProvider = Provider & {
   id: Scalars['ID'];
@@ -42,8 +113,50 @@ export type Providers = {
 };
 
 export type Query = {
+  seed: Seed;
   user?: Maybe<User>;
 };
+
+
+export type QuerySeedArgs = {
+  id: Scalars['String'];
+};
+
+export enum RandomizingAction {
+  Vanilla = 'VANILLA',
+  Replace = 'REPLACE',
+  Randomize = 'RANDOMIZE'
+}
+
+export type Seed = {
+  id: Scalars['ID'];
+  name: Scalars['String'];
+  version: Scalars['String'];
+  configuration: Configuration;
+  user: User;
+};
+
+export type Settings = {
+  gameMode: GameMode;
+  leveling: Leveling;
+  abilities: RandomizingAction;
+  stats: Toggle;
+  keybladeStats: RandomizingAction;
+  bonusModifiers: Toggle;
+  criticalMode: Toggle;
+  reportDepth: RandomizingAction;
+  expMultiplier: Multiplier;
+  valorEXP: Multiplier;
+  wisdomEXP: Multiplier;
+  limitEXP: Multiplier;
+  masterEXP: Multiplier;
+  finalEXP: Multiplier;
+};
+
+export enum Toggle {
+  Off = 'OFF',
+  On = 'ON'
+}
 
 export type TwitchProvider = Provider & {
   id: Scalars['ID'];
@@ -55,6 +168,27 @@ export type TwitchProvider = Provider & {
 export type User = {
   id: Scalars['ID'];
   providers: Providers;
+  seed?: Maybe<Seed>;
+};
+
+export type Worlds = {
+  simulatedTwilightTown: RandomizingAction;
+  twilightTown: RandomizingAction;
+  hollowBastion: RandomizingAction;
+  cavernOfRemembrance: RandomizingAction;
+  beastsCastle: RandomizingAction;
+  olympus: RandomizingAction;
+  agrabah: RandomizingAction;
+  landOfDragons: RandomizingAction;
+  pooh: RandomizingAction;
+  atlantica: RandomizingAction;
+  prideLands: RandomizingAction;
+  disneyCastle: RandomizingAction;
+  timelessRiver: RandomizingAction;
+  halloweenTown: RandomizingAction;
+  portRoyal: RandomizingAction;
+  spaceParanoids: RandomizingAction;
+  twtnw: RandomizingAction;
 };
 
 export type UserQueryVariables = Exact<{ [key: string]: never; }>;
@@ -62,42 +196,38 @@ export type UserQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type UserQuery = { user?: Maybe<(
     Pick<User, 'id'>
-    & { providers: { patreon: ProviderData_PatreonProvider_Fragment, twitch: ProviderData_TwitchProvider_Fragment, discord: ProviderData_DiscordProvider_Fragment } }
+    & { providers: { patreon: Pick<PatreonProvider, 'id' | 'username' | 'email'>, twitch: Pick<TwitchProvider, 'id' | 'username' | 'email'>, discord: Pick<DiscordProvider, 'id' | 'username' | 'email'> }, seed?: Maybe<Pick<Seed, 'id' | 'name'>> }
   )> };
 
-type ProviderData_PatreonProvider_Fragment = Pick<PatreonProvider, 'id' | 'username' | 'email'>;
 
-type ProviderData_TwitchProvider_Fragment = Pick<TwitchProvider, 'id' | 'username' | 'email'>;
-
-type ProviderData_DiscordProvider_Fragment = Pick<DiscordProvider, 'id' | 'username' | 'email'>;
-
-export type ProviderDataFragment = ProviderData_PatreonProvider_Fragment | ProviderData_TwitchProvider_Fragment | ProviderData_DiscordProvider_Fragment;
-
-export const ProviderDataFragmentDoc = gql`
-    fragment ProviderData on Provider {
-  id
-  username
-  email
-}
-    `;
 export const UserDocument = gql`
     query User {
   user {
     id
     providers {
       patreon {
-        ...ProviderData
+        id
+        username
+        email
       }
       twitch {
-        ...ProviderData
+        id
+        username
+        email
       }
       discord {
-        ...ProviderData
+        id
+        username
+        email
       }
+    }
+    seed {
+      id
+      name
     }
   }
 }
-    ${ProviderDataFragmentDoc}`;
+    `;
 
 /**
  * __useUserQuery__

@@ -6,21 +6,25 @@ export const UserQuery = gql`
 			id
 			providers {
 				patreon {
-					...ProviderData
+					id
+					username
+					email
 				}
 				twitch {
-					...ProviderData
+					id
+					username
+					email
 				}
 				discord {
-					...ProviderData
+					id
+					username
+					email
 				}
 			}
+			seed {
+				id
+				name
+			}
 		}
-	}
-
-	fragment ProviderData on Provider {
-		id
-		username
-		email
 	}
 `;
