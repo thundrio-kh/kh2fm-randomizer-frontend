@@ -5,8 +5,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Menu, Modal, Typography } from "antd";
-import React from "react";
-import { useUserQuery } from "../../graphql/generated";
+import download from "downloadjs";
+import React, { useCallback } from "react";
+import { useGenerateKeyMutation, useUserQuery } from "../../graphql/generated";
 import { useToggle } from "../../hooks/useToggle";
 
 const buttonStyles: React.CSSProperties = {
@@ -21,8 +22,15 @@ const buttonStyles: React.CSSProperties = {
 export const UserMenu: React.FC = () => {
 	const { data } = useUserQuery();
 	const user = data?.user;
+	const [generateKey] = useGenerateKeyMutation();
 
 	const [open, toggleOpen] = useToggle(false);
+
+	const onClick = useCallback(() => {
+		generateKey().then(({ data: x }) => {
+			download(x!.generateKey!, "FAF99301.lua");
+		});
+	}, [generateKey]);
 
 	return user ? (
 		<Menu mode="horizontal" theme="dark" selectedKeys={[]}>
@@ -32,8 +40,10 @@ export const UserMenu: React.FC = () => {
 					{user.providers.patreon?.username ||
 						user.providers.twitch?.username ||
 						user.providers.discord?.username}
+					, current seed: {user.seed?.name}
 				</Typography.Link>
 			</Menu.Item>
+			<Menu.Item onClick={onClick}>Download Key</Menu.Item>
 		</Menu>
 	) : (
 		<>

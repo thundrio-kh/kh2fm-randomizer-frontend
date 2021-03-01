@@ -92,6 +92,10 @@ export enum Multiplier {
   Five = 'FIVE'
 }
 
+export type Mutation = {
+  generateKey?: Maybe<Scalars['String']>;
+};
+
 export type PatreonProvider = Provider & {
   id: Scalars['ID'];
   username: Scalars['String'];
@@ -191,6 +195,11 @@ export type Worlds = {
   twtnw: RandomizingAction;
 };
 
+export type GenerateKeyMutationVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GenerateKeyMutation = Pick<Mutation, 'generateKey'>;
+
 export type UserQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -200,6 +209,35 @@ export type UserQuery = { user?: Maybe<(
   )> };
 
 
+export const GenerateKeyDocument = gql`
+    mutation GenerateKey {
+  generateKey
+}
+    `;
+export type GenerateKeyMutationFn = Apollo.MutationFunction<GenerateKeyMutation, GenerateKeyMutationVariables>;
+
+/**
+ * __useGenerateKeyMutation__
+ *
+ * To run a mutation, you first call `useGenerateKeyMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useGenerateKeyMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [generateKeyMutation, { data, loading, error }] = useGenerateKeyMutation({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGenerateKeyMutation(baseOptions?: Apollo.MutationHookOptions<GenerateKeyMutation, GenerateKeyMutationVariables>) {
+        return Apollo.useMutation<GenerateKeyMutation, GenerateKeyMutationVariables>(GenerateKeyDocument, baseOptions);
+      }
+export type GenerateKeyMutationHookResult = ReturnType<typeof useGenerateKeyMutation>;
+export type GenerateKeyMutationResult = Apollo.MutationResult<GenerateKeyMutation>;
+export type GenerateKeyMutationOptions = Apollo.BaseMutationOptions<GenerateKeyMutation, GenerateKeyMutationVariables>;
 export const UserDocument = gql`
     query User {
   user {
