@@ -7,7 +7,7 @@ export const GoAModModalDownload: React.FC = () => {
 
 	return (
 		<>
-			<Button onClick={toggleModalVisible} style={{ marginRight: 4 }} block>
+			<Button onClick={toggleModalVisible} block>
 				Download Mod
 			</Button>
 

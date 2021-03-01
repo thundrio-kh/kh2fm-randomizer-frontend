@@ -35,12 +35,13 @@ export const UserMenu: React.FC = () => {
 	return user ? (
 		<Menu mode="horizontal" theme="dark" selectedKeys={[]}>
 			<Menu.Item>
-				<Typography.Link href="http://localhost:5000/auth/logout">
+				<Typography.Link
+					href={`${process.env.REACT_APP_BACKEND_URL}/auth/logout`}
+				>
 					Hi{" "}
 					{user.providers.patreon?.username ||
 						user.providers.twitch?.username ||
 						user.providers.discord?.username}
-					, current seed: {user.seed?.name}
 				</Typography.Link>
 			</Menu.Item>
 			<Menu.Item onClick={onClick}>Download Key</Menu.Item>
@@ -66,7 +67,7 @@ export const UserMenu: React.FC = () => {
 					}}
 				>
 					<Typography.Link
-						href="http://localhost:5000/auth/patreon"
+						href={`${process.env.REACT_APP_BACKEND_URL}/auth/patreon`}
 						style={{ ...buttonStyles, backgroundColor: "#FF424D" }}
 					>
 						<FontAwesomeIcon style={{ marginRight: 8 }} icon={faPatreon} />
@@ -74,7 +75,7 @@ export const UserMenu: React.FC = () => {
 					</Typography.Link>
 
 					<Typography.Link
-						href="http://localhost:5000/auth/twitch"
+						href={`${process.env.REACT_APP_BACKEND_URL}/auth/twitch`}
 						style={{ ...buttonStyles, backgroundColor: "#9146ff" }}
 					>
 						<FontAwesomeIcon style={{ marginRight: 8 }} icon={faTwitch} />
@@ -82,7 +83,7 @@ export const UserMenu: React.FC = () => {
 					</Typography.Link>
 
 					<Typography.Link
-						href="http://localhost:5000/auth/discord"
+						href={`${process.env.REACT_APP_BACKEND_URL}/auth/discord`}
 						style={{ ...buttonStyles, backgroundColor: "#7289DA" }}
 					>
 						<FontAwesomeIcon style={{ marginRight: 8 }} icon={faDiscord} />

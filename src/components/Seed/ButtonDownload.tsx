@@ -1,11 +1,13 @@
 import { createPnach } from "@valaxor/kh2fm-randomizer";
-import { Button, Dropdown, Menu } from "antd";
+import { Button, Dropdown, Menu, message } from "antd";
 import { MenuProps } from "antd/lib/menu";
 import downloadjs from "downloadjs";
 import React, { useCallback, useContext } from "react";
+import {} from "react-apollo";
 import { useHistory } from "react-router-dom";
 import { SeedContext } from "../../context/seed";
 import { firebase } from "../../firebase";
+import { useCreateSeedMutation } from "../../graphql/generated";
 import { useSeedURL } from "../../hooks/useSeedURL";
 import { GoAModModalDownload } from "../GoAMod/GoAModModalDownload";
 
@@ -19,7 +21,22 @@ export const ButtonDownload: React.FC = () => {
 	} = useContext(SeedContext);
 	const { push } = useHistory();
 
+	const [createSeed] = useCreateSeedMutation();
+
 	const { urlWithSettings: urlWithParams } = useSeedURL();
+
+	const bind = useCallback(() => {
+		const { name, ...config } = configuration;
+
+		createSeed({
+			variables: {
+				name,
+				configuration: config as any,
+			},
+		}).then(() => {
+			message.success("Seed successfully bound!");
+		});
+	}, [createSeed, configuration]);
 
 	const download = useCallback<NonNullable<MenuProps["onClick"]>>(
 		async event => {
@@ -37,8 +54,19 @@ export const ButtonDownload: React.FC = () => {
 	);
 
 	return (
-		<div style={{ display: "flex", margin: "8px 0" }}>
+		<div
+			style={{
+				display: "grid",
+				margin: "8px 0",
+				gridTemplateColumns: "20.7% 39% 39%",
+				gap: 8,
+			}}
+		>
 			<GoAModModalDownload />
+
+			<Button onClick={bind} disabled={!seed}>
+				Bind
+			</Button>
 
 			<Dropdown
 				overlay={
@@ -57,7 +85,7 @@ export const ButtonDownload: React.FC = () => {
 				}
 				disabled={!seed}
 			>
-				<Button type="primary" style={{ marginLeft: 4 }} block>
+				<Button type="primary" block>
 					{!seed && !loading && !error && !name && "Give the Seed a name"}
 					{!seed && loading && !error && name && "Generating Seed..."}
 					{seed && !loading && !error && name && "Download Seed"}

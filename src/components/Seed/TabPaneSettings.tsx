@@ -25,8 +25,10 @@ export const TabPaneSettings: React.FC = () => {
 				<SettingSelect
 					title="Game Mode"
 					optionsMap={{
-						[GameMode.BASE_GAME]: GameMode.BASE_GAME,
-						[GameMode.GOA_MOD]: GameMode.GOA_MOD,
+						// eslint-disable-next-line no-useless-computed-key
+						["Base Game"]: GameMode.BASE_GAME,
+						// eslint-disable-next-line no-useless-computed-key
+						["Garden of Assemblage Mod"]: GameMode.GOA_MOD,
 					}}
 					value={settings.gameMode}
 					disabled

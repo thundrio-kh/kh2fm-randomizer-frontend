@@ -14,12 +14,20 @@ export type Scalars = {
 };
 
 
-export type Configuration = {
-  settings: Settings;
-  worlds: Worlds;
-  include: Include;
-  gameMode: GameModeSchema;
-  experimental: Experimental;
+export type ConfigurationInput = {
+  settings: SettingsInput;
+  worlds: WorldsInput;
+  include: IncludeInput;
+  gameMode: GameModeInput;
+  experimental: ExperimentalInput;
+};
+
+export type ConfigurationType = {
+  settings: SettingsType;
+  worlds: WorldsType;
+  include: IncludeType;
+  gameMode: GameModeType;
+  experimental: ExperimentalType;
 };
 
 export type DiscordProvider = Provider & {
@@ -29,7 +37,13 @@ export type DiscordProvider = Provider & {
   accessToken: Scalars['String'];
 };
 
-export type Experimental = {
+export type ExperimentalInput = {
+  enemies: Toggle;
+  bosses: Toggle;
+  superbossRetry: Toggle;
+};
+
+export type ExperimentalType = {
   enemies: Toggle;
   bosses: Toggle;
   superbossRetry: Toggle;
@@ -40,12 +54,17 @@ export enum GameMode {
   GoaMod = 'GOA_MOD'
 }
 
-export type GameModeSchema = {
+export type GameModeInput = {
   mode: GameMode;
-  goa: GoAModSettings;
+  goa: GoAModSettingsInput;
 };
 
-export type GoAModSettings = {
+export type GameModeType = {
+  mode: GameMode;
+  goa: GoAModSettingsType;
+};
+
+export type GoAModSettingsInput = {
   promiseCharm: Toggle;
   goMode: Toggle;
   shorterDay5: Toggle;
@@ -60,7 +79,40 @@ export type GoAModSettings = {
   summonEffects: Toggle;
 };
 
-export type Include = {
+export type GoAModSettingsType = {
+  promiseCharm: Toggle;
+  goMode: Toggle;
+  shorterDay5: Toggle;
+  fasterOogie: Toggle;
+  fasterPresents: Toggle;
+  earlyLionDash: Toggle;
+  fastHyenasTwo: Toggle;
+  skipDragon: Toggle;
+  fieldCamera: Toggle;
+  cameraUpDown: Toggle;
+  cameraLeftRight: Toggle;
+  summonEffects: Toggle;
+};
+
+export type IncludeInput = {
+  keybladeAbilities: RandomizingAction;
+  donaldAbilities: Toggle;
+  goofyAbilities: Toggle;
+  absentSilhouettes: RandomizingAction;
+  dataOrganizationXIII: RandomizingAction;
+  olympusCups: RandomizingAction;
+  hadesCup: Toggle;
+  terra: Toggle;
+  sephiroth: Toggle;
+  ultimaWeapon: Toggle;
+  finalForm: Toggle;
+  formAbilities: RandomizingAction;
+  growthAbilities: RandomizingAction;
+  maxGrowthAbilities: Toggle;
+  synthItems: Toggle;
+};
+
+export type IncludeType = {
   keybladeAbilities: RandomizingAction;
   donaldAbilities: Toggle;
   goofyAbilities: Toggle;
@@ -93,7 +145,14 @@ export enum Multiplier {
 }
 
 export type Mutation = {
+  createSeed: Seed;
   generateKey?: Maybe<Scalars['String']>;
+};
+
+
+export type MutationCreateSeedArgs = {
+  configuration: ConfigurationInput;
+  name: Scalars['String'];
 };
 
 export type PatreonProvider = Provider & {
@@ -136,11 +195,28 @@ export type Seed = {
   id: Scalars['ID'];
   name: Scalars['String'];
   version: Scalars['String'];
-  configuration: Configuration;
+  configuration: ConfigurationType;
   user: User;
 };
 
-export type Settings = {
+export type SettingsInput = {
+  gameMode: GameMode;
+  leveling: Leveling;
+  abilities: RandomizingAction;
+  stats: Toggle;
+  keybladeStats: RandomizingAction;
+  bonusModifiers: Toggle;
+  criticalMode: Toggle;
+  reportDepth: RandomizingAction;
+  expMultiplier: Multiplier;
+  valorEXP: Multiplier;
+  wisdomEXP: Multiplier;
+  limitEXP: Multiplier;
+  masterEXP: Multiplier;
+  finalEXP: Multiplier;
+};
+
+export type SettingsType = {
   gameMode: GameMode;
   leveling: Leveling;
   abilities: RandomizingAction;
@@ -175,7 +251,7 @@ export type User = {
   seed?: Maybe<Seed>;
 };
 
-export type Worlds = {
+export type WorldsInput = {
   simulatedTwilightTown: RandomizingAction;
   twilightTown: RandomizingAction;
   hollowBastion: RandomizingAction;
@@ -195,6 +271,34 @@ export type Worlds = {
   twtnw: RandomizingAction;
 };
 
+export type WorldsType = {
+  simulatedTwilightTown: RandomizingAction;
+  twilightTown: RandomizingAction;
+  hollowBastion: RandomizingAction;
+  cavernOfRemembrance: RandomizingAction;
+  beastsCastle: RandomizingAction;
+  olympus: RandomizingAction;
+  agrabah: RandomizingAction;
+  landOfDragons: RandomizingAction;
+  pooh: RandomizingAction;
+  atlantica: RandomizingAction;
+  prideLands: RandomizingAction;
+  disneyCastle: RandomizingAction;
+  timelessRiver: RandomizingAction;
+  halloweenTown: RandomizingAction;
+  portRoyal: RandomizingAction;
+  spaceParanoids: RandomizingAction;
+  twtnw: RandomizingAction;
+};
+
+export type CreateSeedMutationVariables = Exact<{
+  name: Scalars['String'];
+  configuration: ConfigurationInput;
+}>;
+
+
+export type CreateSeedMutation = { createSeed: Pick<Seed, 'id' | 'name'> };
+
 export type GenerateKeyMutationVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -209,6 +313,40 @@ export type UserQuery = { user?: Maybe<(
   )> };
 
 
+export const CreateSeedDocument = gql`
+    mutation CreateSeed($name: String!, $configuration: ConfigurationInput!) {
+  createSeed(name: $name, configuration: $configuration) {
+    id
+    name
+  }
+}
+    `;
+export type CreateSeedMutationFn = Apollo.MutationFunction<CreateSeedMutation, CreateSeedMutationVariables>;
+
+/**
+ * __useCreateSeedMutation__
+ *
+ * To run a mutation, you first call `useCreateSeedMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateSeedMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createSeedMutation, { data, loading, error }] = useCreateSeedMutation({
+ *   variables: {
+ *      name: // value for 'name'
+ *      configuration: // value for 'configuration'
+ *   },
+ * });
+ */
+export function useCreateSeedMutation(baseOptions?: Apollo.MutationHookOptions<CreateSeedMutation, CreateSeedMutationVariables>) {
+        return Apollo.useMutation<CreateSeedMutation, CreateSeedMutationVariables>(CreateSeedDocument, baseOptions);
+      }
+export type CreateSeedMutationHookResult = ReturnType<typeof useCreateSeedMutation>;
+export type CreateSeedMutationResult = Apollo.MutationResult<CreateSeedMutation>;
+export type CreateSeedMutationOptions = Apollo.BaseMutationOptions<CreateSeedMutation, CreateSeedMutationVariables>;
 export const GenerateKeyDocument = gql`
     mutation GenerateKey {
   generateKey
