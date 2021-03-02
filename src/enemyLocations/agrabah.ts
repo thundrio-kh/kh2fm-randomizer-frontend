@@ -227,166 +227,166 @@ export const agrabahEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.SILVER_ROCK,
 				value: "11C549E4",
 			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54A24",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54A64",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54AA4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54AE4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54B24",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54B64",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54BA4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54BE4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54C24",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54C64",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54CA4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54CE4",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54D24",
-			},
-			{
-				enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
-				value: "11C54D64",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54DA4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54DE4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54E24",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54E64",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54EA4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54EE4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54F24",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54F64",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54FA4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C54FE4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55024",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55064",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C550A4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C550E4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55124",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55164",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C551A4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C551E4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55224",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55264",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C552A4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C552E4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55324",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C55364",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C553A4",
-			},
-			{
-				enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
-				value: "11C553E4",
-			},
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54A24",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54A64",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54AA4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54AE4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54B24",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54B64",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54BA4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54BE4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54C24",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54C64",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54CA4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54CE4",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54D24",
+			// },
+			// {
+			// 	enemy: Enemies.ICY_CUBE_TREASURE_ROOM,
+			// 	value: "11C54D64",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54DA4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54DE4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54E24",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54E64",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54EA4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54EE4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54F24",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54F64",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54FA4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C54FE4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55024",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55064",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C550A4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C550E4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55124",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55164",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C551A4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C551E4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55224",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55264",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C552A4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C552E4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55324",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C55364",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C553A4",
+			// },
+			// {
+			// 	enemy: Enemies.FIERY_GLOBE_TREASURE_ROOM,
+			// 	value: "11C553E4",
+			// },
 			{
 				enemy: Enemies.FAT_BANDIT,
 				value: "11C55490",
@@ -409,6 +409,7 @@ export const agrabahEnemyLocations: EnemyLocation[] = [
 		world: "07",
 		room: "03",
 		event: "3B",
+		msnOffset: "004FA4A0",
 		enemies: [
 			{
 				enemy: Enemies.VOLCANIC_LORD,
@@ -428,50 +429,50 @@ export const agrabahEnemyLocations: EnemyLocation[] = [
 		room: "0E",
 		event: "56",
 		enemies: [
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50904",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50944",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50984",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C509C4",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50A04",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50AC4",
-			},
-			{
-				enemy: Enemies.HOOK_BAT_AGRABAH,
-				value: "11C50B04",
-			},
-			{
-				enemy: Enemies.HOOK_BAT_AGRABAH,
-				value: "11C50B44",
-			},
-			{
-				enemy: Enemies.HOOK_BAT_AGRABAH,
-				value: "11C50B84",
-			},
-			{
-				enemy: Enemies.FORTUNETELLER,
-				value: "11C50BC4",
-			},
-			{
-				enemy: Enemies.FORTUNETELLER,
-				value: "11C50C04",
-			},
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50904",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50944",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50984",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C509C4",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50A04",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50AC4",
+			// },
+			// {
+			// 	enemy: Enemies.HOOK_BAT_AGRABAH,
+			// 	value: "11C50B04",
+			// },
+			// {
+			// 	enemy: Enemies.HOOK_BAT_AGRABAH,
+			// 	value: "11C50B44",
+			// },
+			// {
+			// 	enemy: Enemies.HOOK_BAT_AGRABAH,
+			// 	value: "11C50B84",
+			// },
+			// {
+			// 	enemy: Enemies.FORTUNETELLER,
+			// 	value: "11C50BC4",
+			// },
+			// {
+			// 	enemy: Enemies.FORTUNETELLER,
+			// 	value: "11C50C04",
+			// },
 		],
 	},
 	{
@@ -482,38 +483,38 @@ export const agrabahEnemyLocations: EnemyLocation[] = [
 		room: "0E",
 		event: "57",
 		enemies: [
-			{
-				enemy: Enemies.RAPID_THRUSTER,
-				value: "11C50D38",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER,
-				value: "11C50D78",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER,
-				value: "11C50DB8",
-			},
-			{
-				enemy: Enemies.FORTUNETELLER,
-				value: "11C50DF8",
-			},
-			{
-				enemy: Enemies.FORTUNETELLER,
-				value: "11C50E38",
-			},
-			{
-				enemy: Enemies.FORTUNETELLER,
-				value: "11C50E78",
-			},
-			{
-				enemy: Enemies.RAPID_THRUSTER_AGRABAH,
-				value: "11C50EB8",
-			},
-			{
-				enemy: Enemies.CRIMSON_JAZZ_AGRABAH,
-				value: "11C50EF8",
-			},
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER,
+			// 	value: "11C50D38",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER,
+			// 	value: "11C50D78",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER,
+			// 	value: "11C50DB8",
+			// },
+			// {
+			// 	enemy: Enemies.FORTUNETELLER,
+			// 	value: "11C50DF8",
+			// },
+			// {
+			// 	enemy: Enemies.FORTUNETELLER,
+			// 	value: "11C50E38",
+			// },
+			// {
+			// 	enemy: Enemies.FORTUNETELLER,
+			// 	value: "11C50E78",
+			// },
+			// {
+			// 	enemy: Enemies.RAPID_THRUSTER_AGRABAH,
+			// 	value: "11C50EB8",
+			// },
+			// {
+			// 	enemy: Enemies.CRIMSON_JAZZ_AGRABAH,
+			// 	value: "11C50EF8",
+			// },
 		],
 	},
 	// {

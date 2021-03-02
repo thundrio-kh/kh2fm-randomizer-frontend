@@ -2,7 +2,7 @@ export const createJoker = (
 	codes: string[],
 	world: string,
 	room: string,
-	event: string
+	event: string,
 ): string[] => {
 	if (codes.length === 0)
 		return []
@@ -10,6 +10,11 @@ export const createJoker = (
 		console.log("Warning: Joker can only apply 255 codes, cutting short to avoid overflow")
 		codes = codes.slice(0, 255)
 	}
+	if (event === 'na')
+		return [`patch=1,EE,E0${(codes.length)
+			.toString(16)
+			.padStart(2, "0")
+			.toUpperCase()}${room}${world},extended,0032BAE0`].concat(codes);
 	return [`patch=1,EE,E0${(codes.length + 3)
 			.toString(16)
 			.padStart(2, "0")

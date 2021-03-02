@@ -14,7 +14,9 @@ export const bosses = {
 		value: "0051",
 		rules: {
 			bannedFrom: [
-				"Prison Keeper" // He teleports into the hill
+				"Prison Keeper", // He teleports into the hill
+				"Pete (Past)", // He teleports underground
+				"Sark"
 			]
 		}
 	},
@@ -116,6 +118,9 @@ export const bosses = {
 		type: EnemyType.BOSS,
 		name: "Pete (Timeless River)",
 		value: "0167",
+		rules: {
+			useWhenReplacing: "090F"
+		}
 	},
 	SHENZI: {
 		size: 799588,
@@ -169,13 +174,13 @@ export const bosses = {
 		size: 1720178,
 		type: EnemyType.BOSS,
 		name: "Volcanic Lord",
-		value: "040B",
+		value: "01040B",
 	},
 	BLIZZARD_LORD: {
 		size: 1191968,
 		type: EnemyType.BOSS,
 		name: "Blizzard Lord",
-		value: "040C",
+		value: "01040C",
 	},
 	// VOLCANIC_LORD: {
 	// 	type: EnemyType.BOSS,
@@ -244,7 +249,7 @@ export const bosses = {
 		size: 896764,
 		type: EnemyType.BOSS,
 		name: "Pete (Past)",
-		value: "0647",
+		value: "010647",
 	},
 	SEIFER: {
 		size: 939680,
@@ -320,7 +325,7 @@ export const bosses = {
 		size: 1150276,
 		type: EnemyType.BOSS,
 		name: "Armor Xemnas",
-		value: "085C",
+		value: "01085C",
 	},
 	VIVI_STRUGGLE: {
 		size: 882418,
@@ -544,7 +549,10 @@ export const bosses = {
 		value: "09C4",
 		rules: {
 			bannedFrom: [
-				"Prison Keeper" // can teleport into hill
+				"Prison Keeper", // can teleport into hill
+				"Pete (Past)",
+				"Armor Xemnas",
+				"Sark"
 			]
 		}
 	},
@@ -558,7 +566,8 @@ export const bosses = {
 				"Roxas", // room transformations get rid of ground
 				"Roxas (Data)",
 				"Scar", // lion sora can't get out of initial attack
-				"Hades (Escape)" // room transformation puts you in center of room unable to leave
+				"Hades (Escape)", // room transformation puts you in center of room unable to leave
+				"Grim Reaper"
 			]
 		}
 	},
@@ -572,7 +581,8 @@ export const bosses = {
 				"Roxas", // room transformations get rid of ground
 				"Roxas (Data)",
 				"Scar", // lion sora can't get out of initial attack
-				"Hades (Escape)" // room transformation puts you in center of room unable to leave
+				"Hades (Escape)", // room transformation puts you in center of room unable to leave
+				"Grim Reaper"
 			]
 		}
 	},

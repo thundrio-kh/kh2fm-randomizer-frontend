@@ -8,6 +8,7 @@ export const timelessRiverEnemyLocations: EnemyLocation[] = [
 		location: LocationName.TIMELESS_RIVER,
 		description: "Pete (Past) Boss Fight",
 		maxSize: 3252168, // Marluxia
+		msnOffset: "004FA4A0",
 		world: "0D",
 		room: "01",
 		event: "3A",
@@ -286,14 +287,16 @@ export const timelessRiverEnemyLocations: EnemyLocation[] = [
 		type: EnemyLocationType.BOSS_FIGHT,
 		location: LocationName.TIMELESS_RIVER,
 		description: "Pete Final Boss Fight",
+		maxSize: 3252168, // Marluxia
+		msnOffset: "004FA4A0",
 		world: "0D",
 		room: "03",
 		event: "35",
 		enemies: [
-			// {
-			// 	enemy: Enemies.PETE_TR,
-			// 	value: "11C55BF0",
-			// },
+			{
+				enemy: Enemies.PETE_TR,
+				value: "11C55BF0",
+			},
 		],
 	},
 ];

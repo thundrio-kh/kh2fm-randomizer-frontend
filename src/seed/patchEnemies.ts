@@ -1,9 +1,8 @@
 import { createLine } from "../helpers/createLine";
 import { createJoker } from "../helpers/createJoker";
-export const patchEnemies = (enemymap: any[], world: string, room: string, event: string) => {
+export const patchEnemies = (enemymap: any[], world: string, room: string, event: string, msnOffset?: string) => {
     var comment = "// "
     var codes = []
-
 
     for (var index = 0; index < enemymap.length; index++) {
         const replacement = enemymap[index]
@@ -18,7 +17,7 @@ export const patchEnemies = (enemymap: any[], world: string, room: string, event
                     newValue = newenemy.enemy.rules.useWhenReplacing
                 }
             }
-            const modifierAddress  = (parseInt(oldenemy.value, 16) + 32).toString(16);
+            const modifierAddress  = (parseInt(oldenemy.value, 16) + 36).toString(16);
             const modifier =
                 newValue.length === 6 ? newValue.substring(0, 2) : "";
             codes.push(createLine(oldenemy.value, newValue, false))
@@ -45,6 +44,11 @@ export const patchEnemies = (enemymap: any[], world: string, room: string, event
                 }
             }
         }
+    }
+    if (msnOffset && codes.length > 0) {
+        // Disable the intro camera for the boss
+        const cameraOffset = (parseInt(msnOffset, 16) + 28).toString(16);
+        codes.push(createLine(cameraOffset, "00000000"))
     }
     return comment.substr(0,comment.length-2) + "\n" + createJoker(codes, world, room, event).join("\n") + "\n"
 }

@@ -11,70 +11,70 @@ export const beastsCastleEnemyLocations: EnemyLocation[] = [
 		room: "01",
 		event: "44",
 		enemies: [
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C504CC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5050C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5054C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5058C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C505CC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5060C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5064C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5068C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C506CC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5070C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5074C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5078C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C507CC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5080C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5084C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5088C",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C504CC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5050C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5054C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5058C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C505CC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5060C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5064C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5068C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C506CC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5070C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5074C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5078C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C507CC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5080C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5084C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5088C",
+			// },
 		],
 	},
 	{
@@ -195,12 +195,23 @@ export const beastsCastleEnemyLocations: EnemyLocation[] = [
 		description: "Dark Thorn Boss Fight",
 		maxSize: 2314684, // Prison Keeper
 		world: "05",
+		// msnOffset: "004FA4A0",
 		room: "05",
 		event: "4F",
 		enemies: [
 			{
 				enemy: Enemies.DARK_THORN,
 				value: "11C5A4D4",
+				patches: {
+					all: [
+						{
+							name: "Don't spawn Chandelier",
+							codes: [
+								"11C5A16C 00000000"
+							]
+						}
+					] 
+				},
 			},
 		],
 	},
@@ -282,6 +293,7 @@ export const beastsCastleEnemyLocations: EnemyLocation[] = [
 		description: "Xaldin Boss Fight",
 		maxSize: 2854684, // Terra
 		world: "05",
+		// msnOffset: "004FA4A0",
 		room: "0F",
 		event: "52",
 		enemies: [

@@ -34,7 +34,6 @@ import { createLine } from "./createLine";
 import { patchEnemies } from "../seed/patchEnemies";
 import { shuffle } from "./shuffle";
 import { placeBosses } from "../seed/placeBosses";
-import { spawnlimiter } from "src/patches/spawnlimiter";
 
 export const createPnach = (seed: Seed, configuration: Configuration) => {
 	const patches: string[] = [`// ${configuration.name}`];
@@ -105,17 +104,27 @@ export const createPnach = (seed: Seed, configuration: Configuration) => {
 		configuration.experimental.enemies === Toggle.ON ||
 		configuration.experimental.bosses === Toggle.ON
 	) {
+		var limiterCodes = ''
 		const shuffledEnemies = [
 			...shuffle<Enemy>([...enemiesMap.values()], configuration.name),
 		];
 		const enemySeed = new Map<string, Enemy>();
 		for (const enemy of enemiesMap.values()) {
-			enemySeed.set(enemy.value, shuffledEnemies.shift()!);
+			const newEnemy = shuffledEnemies.shift()!
+			var limiterOffset = ''
+			if (newEnemy.limiterOffset) {
+				limiterOffset = newEnemy.limiterOffset
+			}
+			const comment = " // " + newEnemy.name + " has limiter of " + enemy.limiter + " with value of " +  newEnemy.value + " and is replacing " + enemy.name
+			limiterCodes += createLine(limiterOffset, "000000" + enemy.limiter + comment) 
+			enemySeed.set(enemy.value, newEnemy);
 		}
 
+		
+
 		if (configuration.experimental.enemies === Toggle.ON) {
-			// spawn limiter needs to be low so forced fights will spawn all the enemies
-			patches.push(spawnlimiter);
+
+			patches.push(limiterCodes)
 
 			for (const location of enemies) {
 
@@ -184,7 +193,7 @@ export const createPnach = (seed: Seed, configuration: Configuration) => {
 																	rep.old.room === "03" &&
 																	rep.old.event === "3B")
 
-				patches.push(patchEnemies(agrabahbosses, "07", "03", "3B"))
+				patches.push(patchEnemies(agrabahbosses, "07", "03", "3B", "004FA4A0"))
 
 				// apply leon/yuffie replacements second. 
 				var leonyuffie = replacementMapping.filter((rep: any) => rep.old.world === "06" &&
@@ -204,7 +213,8 @@ export const createPnach = (seed: Seed, configuration: Configuration) => {
 
 				for (var index = 0; index < replacementMapping.length; index++) {
 					const replacement = replacementMapping[index]
-					patches.push(patchEnemies([replacement], replacement.old.world, replacement.old.room, replacement.old.event))
+					console.log(replacement.old)
+					patches.push(patchEnemies([replacement], replacement.old.world, replacement.old.room, replacement.old.event, replacement.old.msnOffset))
 				}
 			}
 		}

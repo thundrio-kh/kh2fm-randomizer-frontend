@@ -52,6 +52,7 @@ export const placeBosses = (seed: string) => {
 						enemy.room = location.room
 						enemy.event = location.event
 						enemy.maxSize = location.maxSize
+						enemy.msnOffset = location.msnOffset
 						return enemy
 					})
 				})
@@ -64,7 +65,7 @@ export const placeBosses = (seed: string) => {
 	for (var b = 0; b < bosses.length; b++) {
 
 		// Try multiple times to find a correct placing for the bosses	
-		const NATTEMPTS = 3
+		const NATTEMPTS = 5
 		for (var i = 0; i < NATTEMPTS; i++) {
 			const shuffledBosses = unignoredBosses.map(boss => boss)
 			const availableLocations = shuffledBosses.map(newboss => {
@@ -88,6 +89,8 @@ export const placeBosses = (seed: string) => {
 			// 	console.log(loc.boss.enemy.name);
 			// 	console.log("\t" + loc.available.length)
 			// }
+			// console.log("BLEKBLEKBLEKBLEKBLEK")
+			// console.log(availableLocations.length)
 			// console.log(availableLocations)
 
 			// // creating an object to print out the number of avilable bosses at each location
@@ -104,7 +107,6 @@ export const placeBosses = (seed: string) => {
 			// 	}
 			// }
 
-			// console.log(locs)
 
 			const replacementMapping = attemptPlacing(availableLocations, shuffledBosses)
 			if (replacementMapping !== false)

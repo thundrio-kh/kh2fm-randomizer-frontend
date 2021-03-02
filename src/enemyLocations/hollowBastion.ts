@@ -355,46 +355,46 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 		room: "10",
 		event: "3E",
 		enemies: [
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BC4C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BC8C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BCCC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BD0C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BD4C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BD8C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BDCC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BE0C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BE4C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4BE8C",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BC4C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BC8C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BCCC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BD0C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BD4C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BD8C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BDCC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BE0C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BE4C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4BE8C",
+			// },
 			{
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4C044",
@@ -501,86 +501,86 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4C7E8",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4C9B0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4C9F0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CA30",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CA70",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CAB0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CAF0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CB30",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CB70",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CBB0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CBF0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CC30",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CC70",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CCB0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CCF0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CD30",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CD70",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CDB0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CDF0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CE30",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CE70",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4C9B0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4C9F0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CA30",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CA70",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CAB0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CAF0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CB30",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CB70",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CBB0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CBF0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CC30",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CC70",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CCB0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CCF0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CD30",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CD70",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CDB0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CDF0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CE30",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CE70",
+			// },
 			{
 				enemy: Enemies.MORNING_STAR,
 				value: "11C4CEB0",
@@ -597,70 +597,70 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.SOLDIER,
 				value: "11C4CF70",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CFB0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4CFF0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D030",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D070",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D0B0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D0F0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D130",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D170",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D1B0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D1F0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D230",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D270",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D2B0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D2F0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D330",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D370",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CFB0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4CFF0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D030",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D070",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D0B0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D0F0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D130",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D170",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D1B0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D1F0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D230",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D270",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D2B0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D2F0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D330",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D370",
+			// },
 		],
 	},
 	{
@@ -671,10 +671,10 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 		room: "10",
 		event: "40",
 		enemies: [
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D594",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D594",
+			// },
 			{
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4D5D4",
@@ -687,34 +687,34 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4D654",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D694",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D6D4",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D714",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D754",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D694",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D6D4",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D714",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D754",
+			// },
 			{
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4D794",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D7D4",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4D814",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D7D4",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4D814",
+			// },
 			{
 				enemy: Enemies.ARMORED_KNIGHT,
 				value: "11C4D854",
@@ -755,30 +755,30 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.MORNING_STAR,
 				value: "11C4DC1C",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DC5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DC9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DCDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DD1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DD5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DD9C",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DC5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DC9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DCDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DD1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DD5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DD9C",
+			// },
 		],
 	},
 	{
@@ -789,26 +789,26 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 		room: "10",
 		event: "41",
 		enemies: [
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4DFC0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E000",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E040",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E080",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E0C0",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4DFC0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E000",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E040",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E080",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E0C0",
+			// },
 			{
 				enemy: Enemies.SURVEILLANCE_ROBOT,
 				value: "11C4E100",
@@ -817,10 +817,10 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.SURVEILLANCE_ROBOT,
 				value: "11C4E140",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E180",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E180",
+			// },
 			{
 				enemy: Enemies.SURVEILLANCE_ROBOT,
 				value: "11C4E1C0",
@@ -829,62 +829,62 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 				enemy: Enemies.SURVEILLANCE_ROBOT,
 				value: "11C4E200",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E240",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E280",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E2C0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E300",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E240",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E280",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E2C0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E300",
+			// },
 			{
 				enemy: Enemies.MORNING_STAR,
 				value: "11C4E340",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E380",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E3C0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E400",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E440",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E480",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E4C0",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E500",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E540",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C4E580",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E380",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E3C0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E400",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E440",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E480",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E4C0",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E500",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E540",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C4E580",
+			// },
 			{
 				enemy: Enemies.MORNING_STAR,
 				value: "11C4E6A4",
@@ -956,6 +956,7 @@ export const hollowBastionEnemyLocations: EnemyLocation[] = [
 		location: LocationName.HOLLOW_BASTION,
 		description: "Sephiroth Boss Fight",
 		maxSize: 4443212, // Larxene
+		// msnOffset: "004FA4A0",
 		world: "04",
 		room: "01",
 		event: "4B",

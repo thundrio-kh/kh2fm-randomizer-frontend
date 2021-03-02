@@ -220,8 +220,9 @@ export const disneyCastleEnemyLocations: EnemyLocation[] = [
 		description: "Lingering Will Boss Fight",
 		maxSize: 4443212, // Larxene
 		world: "0C",
+		// msnOffset: "004FA4A0",
 		room: "07",
-		event: "49",
+		event: "na",
 		enemies: [
 			{
 				enemy: Enemies.LINGERING_WILL,

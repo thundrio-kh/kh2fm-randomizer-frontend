@@ -36,6 +36,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Xigbar Data Fight",
 		maxSize: 2351052, // Hades II
+		msnOffset: "004FA4A0",
 		world: "12",
 		room: "0A",
 		event: "64",
@@ -51,6 +52,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Xaldin Data Fight",
 		maxSize: 2854684, // Terra
+		// msnOffset: "004FA4A0",
 		world: "05",
 		room: "0F",
 		event: "61",
@@ -66,6 +68,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Vexen Data Fight",
 		maxSize: 4443212, // Larxene
+		// msnOffset: "004FA4E0",
 		world: "04",
 		room: "20",
 		event: "92",
@@ -81,6 +84,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Lexaeus Data Fight",
 		maxSize: 4443212, // Larxene
+		msnOffset: "004FA4E0",
 		world: "04",
 		room: "21",
 		event: "93",
@@ -103,6 +107,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Saix Data Fight",
 		maxSize: 3557686,  // Saix
+		msnOffset: "004FA4C0",
 		world: "12",
 		room: "0F",
 		event: "66",
@@ -118,6 +123,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Axel Data Fight",
 		maxSize: 4443212, // Larxene
+		msnOffset: "004FA4A0",
 		world: "02",
 		room: "14",
 		event: "D5",
@@ -161,6 +167,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Marluxia Data Fight",
 		maxSize: 4443212, // Larxene
+		// msnOffset: "004FA4A0",
 		world: "04",
 		room: "26",
 		event: "96",
@@ -168,17 +175,17 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 			{
 				enemy: Enemies.MARLUXIA_DATA,
 				value: "11C59114",
-				patches: {
-					all: [
-						{
-							name: "Don't turn off player control",
-							codes: [
-								"204fa564 00000089",
-								"204fa568 00600000"
-							]
-						}
-					] 
-				},
+				// patches: {
+				// 	all: [
+				// 		{
+				// 			name: "Don't turn off player control",
+				// 			codes: [
+				// 				"204fa564 00000089",
+				// 				"204fa568 00600000"
+				// 			]
+				// 		}
+				// 	] 
+				// },
 			},
 		],
 	},
@@ -201,6 +208,7 @@ export const organizationXIIIEnemyLocations: EnemyLocation[] = [
 		location: LocationName.CAVERN_OF_REMEMBRANCE,
 		description: "Roxas Data Fight",
 		maxSize: 4443212, // Larxene
+		// msnOffset: "004FA4A0",
 		world: "12",
 		room: "15",
 		event: "63",

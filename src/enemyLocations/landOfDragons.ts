@@ -127,54 +127,54 @@ export const landOfDragonsEnemyLocations: EnemyLocation[] = [
 		room: "02",
 		event: "50",
 		enemies: [
-			// {
-			// 	enemy: Enemies.SHADOW,
-			// 	value: "11C5B760",
-			// },
-			// {
-			// 	enemy: Enemies.SHADOW,
-			// 	value: "11C5B7A0",
-			// },
-			// {
-			// 	enemy: Enemies.SHADOW,
-			// 	value: "11C5B7E0",
-			// },
-			// {
-			// 	enemy: Enemies.NIGHTWALKER,
-			// 	value: "11C5B820",
-			// },
-			// {
-			// 	enemy: Enemies.NIGHTWALKER,
-			// 	value: "11C5B860",
-			// },
-			// {
-			// 	enemy: Enemies.NIGHTWALKER,
-			// 	value: "11C5B8A0",
-			// },
-			// {
-			// 	enemy: Enemies.SHADOW,
-			// 	value: "11C5B8E0",
-			// },
-			// {
-			// 	enemy: Enemies.SHADOW,
-			// 	value: "11C5B920",
-			// },
-			// {
-			// 	enemy: Enemies.NIGHTWALKER,
-			// 	value: "11C5B9CC",
-			// },
-			// {
-			// 	enemy: Enemies.NIGHTWALKER,
-			// 	value: "11C5BA0C",
-			// },
-			// {
-			// 	enemy: Enemies.ASSAULT_RIDER,
-			// 	value: "11C5BA4C",
-			// },
-			// {
-			// 	enemy: Enemies.ASSAULT_RIDER,
-			// 	value: "11C5BA8C",
-			// },
+			{
+				enemy: Enemies.SHADOW,
+				value: "11C5B760",
+			},
+			{
+				enemy: Enemies.SHADOW,
+				value: "11C5B7A0",
+			},
+			{
+				enemy: Enemies.SHADOW,
+				value: "11C5B7E0",
+			},
+			{
+				enemy: Enemies.NIGHTWALKER,
+				value: "11C5B820",
+			},
+			{
+				enemy: Enemies.NIGHTWALKER,
+				value: "11C5B860",
+			},
+			{
+				enemy: Enemies.NIGHTWALKER,
+				value: "11C5B8A0",
+			},
+			{
+				enemy: Enemies.SHADOW,
+				value: "11C5B8E0",
+			},
+			{
+				enemy: Enemies.SHADOW,
+				value: "11C5B920",
+			},
+			{
+				enemy: Enemies.NIGHTWALKER,
+				value: "11C5B9CC",
+			},
+			{
+				enemy: Enemies.NIGHTWALKER,
+				value: "11C5BA0C",
+			},
+			{
+				enemy: Enemies.ASSAULT_RIDER,
+				value: "11C5BA4C",
+			},
+			{
+				enemy: Enemies.ASSAULT_RIDER,
+				value: "11C5BA8C",
+			},
 		],
 	},
 	{
@@ -313,162 +313,162 @@ export const landOfDragonsEnemyLocations: EnemyLocation[] = [
 		room: "05",
 		event: "48",
 		enemies: [
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5791C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5795C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5799C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C579DC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57A1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57A5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57A9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57ADC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57B1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57B5C",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5791C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5795C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5799C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C579DC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57A1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57A5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57A9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57ADC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57B1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57B5C",
+			// },
 			{
 				enemy: Enemies.ASSAULT_RIDER,
 				value: "11C57B9C",
 			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57BDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57C1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57C5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57C9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57CDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57D1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57D5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57D9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57DDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57E1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57E5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57E9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57EDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57F1C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57F5C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57F9C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C57FDC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5801C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5805C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5809C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C580DC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5811C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5815C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5819C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C581DC",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5821C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5825C",
-			},
-			{
-				enemy: Enemies.SHADOW,
-				value: "11C5829C",
-			},
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57BDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57C1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57C5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57C9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57CDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57D1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57D5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57D9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57DDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57E1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57E5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57E9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57EDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57F1C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57F5C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57F9C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C57FDC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5801C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5805C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5809C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C580DC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5811C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5815C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5819C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C581DC",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5821C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5825C",
+			// },
+			// {
+			// 	enemy: Enemies.SHADOW,
+			// 	value: "11C5829C",
+			// },
 			{
 				enemy: Enemies.ASSAULT_RIDER,
 				value: "11C58348",
@@ -559,6 +559,7 @@ export const landOfDragonsEnemyLocations: EnemyLocation[] = [
 		location: LocationName.LAND_OF_DRAGONS,
 		description: "Shan-Yu Boss Fight",
 		maxSize: 2631800, // Shan-Yu
+		// msnOffset: "004FA4D0",
 		world: "08",
 		room: "09",
 		event: "4B",
@@ -570,67 +571,92 @@ export const landOfDragonsEnemyLocations: EnemyLocation[] = [
 			{
 				enemy: Enemies.SHAN_YU,
 				value: "11C4BE70",
+				patches: {
+					all: [
+						{
+							name: "Don't spawn Hayabusa/Nightwalkers",
+							codes: [
+								"11C4BEB0 00000000",
+								"11C4BF24 00000000",
+								"11C4BF64 00000000",
+								"11C4BFA4 00000000",
+								"11C4BFE4 00000000",
+								"11C4C024 00000000",
+								"11C4C064 00000000",
+								"11C4C0A4 00000000",
+								"11C4C0E4 00000000",
+								"11C4C124 00000000",
+								"11C4C164 00000000",
+								"11C4C1A4 00000000",
+								"11C4C1E4 00000000",
+								"11C4C224 00000000",
+								"11C4C264 00000000",
+								"11C4C2A4 00000000"
+							]
+						}
+					] 
+				},
 			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4BF24",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4BF64",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4BFA4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4BFE4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C024",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C064",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C0A4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C0E4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C124",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C164",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C1A4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C1E4",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C224",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C264",
-			},
-			{
-				enemy: Enemies.NIGHTWALKER,
-				value: "11C4C2A4",
-			},
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4BF24",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4BF64",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4BFA4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4BFE4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C024",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C064",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C0A4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C0E4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C124",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C164",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C1A4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C1E4",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C224",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C264",
+			// },
+			// {
+			// 	enemy: Enemies.NIGHTWALKER,
+			// 	value: "11C4C2A4",
+			// },
 		],
 	},
 	// {
@@ -741,6 +767,7 @@ export const landOfDragonsEnemyLocations: EnemyLocation[] = [
 		location: LocationName.LAND_OF_DRAGONS,
 		description: "Storm Rider Boss Fight",
 		maxSize: 4443212, // Larxene
+		msnOffset: "004FA4A0",
 		world: "08",
 		room: "08",
 		event: "4F",

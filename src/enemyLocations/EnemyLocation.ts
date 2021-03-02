@@ -13,6 +13,7 @@ export interface EnemyLocation {
 	location: LocationName;
 	description: string;
 	maxSize?: number;
+	msnOffset?: string;
 	world: string;
 	room: string;
 	event?: string;
@@ -20,6 +21,7 @@ export interface EnemyLocation {
 	enemies: {
 		enemy: Enemy;
 		maxSize?: number;
+		msnOffset?: string;
 		value: string;
 		world?: string;
 		room?: string;

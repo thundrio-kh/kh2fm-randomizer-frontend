@@ -12,10 +12,10 @@ export const olympusEnemyLocations: EnemyLocation[] = [
 		room: "06",
 		event: "70",
 		enemies: [
-			{
-				enemy: Enemies.HADES_I,
-				value: "11C48478"
-			}
+			// {
+			// 	enemy: Enemies.HADES_I,
+			// 	value: "11C48478"
+			// }
 		]
 	},
 	{
@@ -27,10 +27,10 @@ export const olympusEnemyLocations: EnemyLocation[] = [
 		room: "05",
 		event: "6F",
 		enemies: [
-			{
-				enemy: Enemies.HADES_ESCAPE,
-				value: "11C591FC"
-			}
+			// {
+			// 	enemy: Enemies.HADES_ESCAPE,
+			// 	value: "11C591FC"
+			// }
 		]
 	},
 	{
@@ -156,6 +156,7 @@ export const olympusEnemyLocations: EnemyLocation[] = [
 		location: LocationName.OLYMPUS,
 		description: "Cerberus Boss Fight",
 		maxSize: 4443212, // Larxene
+		msnOffset: "004FA4A0",
 		world: "06",
 		room: "07",
 		event: "72",
@@ -186,6 +187,7 @@ export const olympusEnemyLocations: EnemyLocation[] = [
 		location: LocationName.OLYMPUS,
 		description: "Pete II Boss Fight",
 		maxSize: 1642502, // Cloud
+		msnOffset: "004FA4D0",
 		world: "06",
 		room: "08",
 		event: "74",
@@ -371,6 +373,7 @@ export const olympusEnemyLocations: EnemyLocation[] = [
 		location: LocationName.OLYMPUS,
 		description: "Hades Boss Phase II",
 		maxSize: 2631800, // Shan-Yu
+		msnOffset: "004FA4A0",
 		world: "06",
 		room: "0D",
 		event: "CA",
