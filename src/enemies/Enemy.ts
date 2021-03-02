@@ -12,6 +12,8 @@ export interface Enemy {
 	value: string;
 	limiter?: string;
 	limiterOffset?: string;
+	aiModifier?: string;
+	spawnModifier?: string;
 	size?: number;
 	rules?: {
 		bannedFrom?: string[];

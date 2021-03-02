@@ -17,11 +17,12 @@ export const patchEnemies = (enemymap: any[], world: string, room: string, event
                     newValue = newenemy.enemy.rules.useWhenReplacing
                 }
             }
-            const modifierAddress  = (parseInt(oldenemy.value, 16) + 36).toString(16);
-            const modifier =
-                newValue.length === 6 ? newValue.substring(0, 2) : "";
+            const spawnModifierAddress = (parseInt(oldenemy.value, 16) + 32).toString(16);
+            const aiModifierAddress  = (parseInt(oldenemy.value, 16) + 36).toString(16);
+        
             codes.push(createLine(oldenemy.value, newValue, false))
-            codes.push(createLine(modifierAddress, modifier, false))
+            codes.push(createLine(spawnModifierAddress, newenemy.enemy.spawnModifier ? newenemy.enemy.spawnModifier : "00", false))
+            codes.push(createLine(aiModifierAddress, newenemy.enemy.aiModifier ? newenemy.enemy.aiModifier : "00", false))
             const sourcePatches = oldenemy.patches
             if (sourcePatches) {
                 if (sourcePatches.all) {
@@ -48,7 +49,7 @@ export const patchEnemies = (enemymap: any[], world: string, room: string, event
     if (msnOffset && codes.length > 0) {
         // Disable the intro camera for the boss
         const cameraOffset = (parseInt(msnOffset, 16) + 28).toString(16);
-        codes.push(createLine(cameraOffset, "00000000"))
+        codes.push(createLine(cameraOffset, "00000002"))
     }
     return comment.substr(0,comment.length-2) + "\n" + createJoker(codes, world, room, event).join("\n") + "\n"
 }

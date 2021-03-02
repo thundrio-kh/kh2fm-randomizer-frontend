@@ -174,13 +174,15 @@ export const bosses = {
 		size: 1720178,
 		type: EnemyType.BOSS,
 		name: "Volcanic Lord",
-		value: "01040B",
+		value: "040B",
+		spawnModifier: "01"
 	},
 	BLIZZARD_LORD: {
 		size: 1191968,
 		type: EnemyType.BOSS,
 		name: "Blizzard Lord",
-		value: "01040C",
+		value: "040C",
+		spawnModifier: "01"
 	},
 	// VOLCANIC_LORD: {
 	// 	type: EnemyType.BOSS,
@@ -231,7 +233,8 @@ export const bosses = {
 		size: 1499488,
 		type: EnemyType.BOSS,
 		name: "Grim Reaper",
-		value: "010607",
+		value: "0607",
+		spawnModifier: "01"
 	},
 	RIKU: {
 		size: 755026,
@@ -249,7 +252,8 @@ export const bosses = {
 		size: 896764,
 		type: EnemyType.BOSS,
 		name: "Pete (Past)",
-		value: "010647",
+		value: "0647",
+		spawnModifier: "01"
 	},
 	SEIFER: {
 		size: 939680,
@@ -325,7 +329,8 @@ export const bosses = {
 		size: 1150276,
 		type: EnemyType.BOSS,
 		name: "Armor Xemnas",
-		value: "01085C",
+		value: "085C",
+		spawnModifier: "01"
 	},
 	VIVI_STRUGGLE: {
 		size: 882418,
@@ -373,25 +378,29 @@ export const bosses = {
 		size: 1278612,
 		type: EnemyType.BOSS,
 		name: "Leon",
-		value: "0108F8",
+		value: "08F8",
+		spawnModifier: "01"
 	},
 	CLOUD: {
 		size: 1642502,
 		type: EnemyType.BOSS,
 		name: "Cloud",
-		value: "0108F9",
+		value: "08F9",
+		spawnModifier: "01"
 	},
 	TIFA: {
 		size: 1053854,
 		type: EnemyType.BOSS,
 		name: "Tifa",
-		value: "0108FA",
+		value: "08FA",
+		spawnModifier: "01"
 	},
 	YUFFIE: {
 		size: 755432,
 		type: EnemyType.BOSS,
 		name: "Yuffie",
-		value: "0108FB",
+		value: "08FB",
+		spawnModifier: "01"
 	},
 	HADES_CUPS: {
 		size: 2347708,
@@ -415,19 +424,20 @@ export const bosses = {
 		size: 3252168,
 		type: EnemyType.BOSS,
 		name: "Marluxia (Absent Silhouette)",
-		value: "000923",
+		value: "0923",
 	},
 	MARLUXIA_DATA: {
 		size: 3252168,
 		type: EnemyType.BOSS,
 		name: "Marluxia (Data)",
-		value: "010923",
+		value: "0923",
+		aiModifier: "01"
 	},
 	VEXEN_AS: {
 		size: 2708244,
 		type: EnemyType.BOSS,
 		name: "Vexen (Absent Silhouette)",
-		value: "000933",
+		value: "0933",
 		rules: {
 			bannedFrom: [
 				"Shan-Yu" // meter messes with door meter
@@ -443,29 +453,22 @@ export const bosses = {
 		}
 	},
 	VEXEN_DATA: {
-		size: 2708244,
+		size: 4508244,
 		type: EnemyType.BOSS,
 		name: "Vexen (Data)",
-		value: "010933",
+		value: "0933",
+		aiModifier: "01",
 		rules: {
 			bannedFrom: [
 				"Shan-Yu", // meter messes with door meter
 			]
-		},
-		patches: {
-			all: [
-				{
-					name: "Don't Load Anti-Sora",
-					codes: ["11CBC360 00000000"]
-				}
-			] 
 		}
 	},
 	LEXAEUS_AS: {
 		size: 2359752,
 		type: EnemyType.BOSS,
 		name: "Lexaeus (Absent Silhouette)",
-		value: "000935",
+		value: "0935",
 		rules: {
 			bannedFrom: [
 				"Pete (Olympus Coliseum; Part II)" // hard to beat in time constraint
@@ -475,8 +478,9 @@ export const bosses = {
 	LEXAUS_DATA: {
 		size: 2359752,
 		type: EnemyType.BOSS,
-		name: "Lexaus (Data)",
-		value: "010935",
+		name: "Lexaeus (Data)",
+		value: "0935",
+		aiModifier: "01",
 		rules: {
 			bannedFrom: [
 				"Pete (Olympus Coliseum; Part II)" // hard to beat in time constraint
@@ -487,7 +491,7 @@ export const bosses = {
 		size: 3373592,
 		type: EnemyType.BOSS,
 		name: "Roxas",
-		value: "000951",
+		value: "0951",
 		rules: {
 			bannedFrom: [
 				"Grim Reaper", // DM goes OOB
@@ -498,7 +502,8 @@ export const bosses = {
 		size: 3373592,
 		type: EnemyType.BOSS,
 		name: "Roxas (Data)",
-		value: "010951",
+		value: "0951",
+		aiModifier: "01",
 		rules: {
 			bannedFrom: [
 				"Grim Reaper", // DM goes OOB
@@ -510,7 +515,7 @@ export const bosses = {
 		size: 3443212,
 		type: EnemyType.BOSS,
 		name: "Larxene (Absent Silhouette)",
-		value: "000962",
+		value: "0962",
 		rules: {
 			bannedFrom: [
 				"Armor Xemnas", // reported as unkillable/tposed
@@ -522,7 +527,8 @@ export const bosses = {
 		size: 3443212,
 		type: EnemyType.BOSS,
 		name: "Larxene (Data)",
-		value: "010962",
+		value: "0962",
+		aiModifier: "01",
 		rules: {
 			bannedFrom: [
 				"Armor Xemnas", // reported as unkillable/tposed

@@ -89,8 +89,6 @@ export const placeBosses = (seed: string) => {
 			// 	console.log(loc.boss.enemy.name);
 			// 	console.log("\t" + loc.available.length)
 			// }
-			// console.log("BLEKBLEKBLEKBLEKBLEK")
-			// console.log(availableLocations.length)
 			// console.log(availableLocations)
 
 			// // creating an object to print out the number of avilable bosses at each location
